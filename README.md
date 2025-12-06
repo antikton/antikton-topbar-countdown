@@ -1,6 +1,6 @@
 # Topbar Countdown Notice
 
-[![WordPress Plugin Version](https://img.shields.io/badge/version-1.0.2-blue.svg)](https://github.com/antikton/topbar-countdown-notice)
+[![WordPress Plugin Version](https://img.shields.io/badge/version-1.0.3-blue.svg)](https://github.com/antikton/topbar-countdown-notice)
 [![WordPress](https://img.shields.io/badge/wordpress-5.0%2B-blue.svg)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/php-7.4%2B-purple.svg)](https://php.net/)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -209,29 +209,29 @@ Use these classes in your Custom CSS field:
 ### Frontend Display
 
 #### Active Countdown Bar
-![Active Countdown Bar](screenshots/topbar-countdown-notice-sample-active.png)
+![Active Countdown Bar](screenshots/screenshot-1.png)
 *Example of the top bar with active countdown timer showing urgency for a limited-time offer*
 
 #### Alternative Content (After Expiration)
-![Alternative Content](screenshots/topbar-countdown-notice-sample-after.png)
+![Alternative Content](screenshots/screenshot-2.png)
 *Example of alternative content displayed after the countdown expires*
 
 ### Admin Settings Panels
 
 #### 1. General & Schedule Settings
-![General Settings](screenshots/topbar-countdown-notice-settings-1-general.png)
+![General Settings](screenshots/screenshot-3.png)
 *Configure activation status and scheduling options for when the bar should appear*
 
 #### 2. Content & Countdown Settings
-![Content Settings](screenshots/topbar-countdown-notice-settings-2-content.png)
+![Content Settings](screenshots/screenshot-4.png)
 *Set up your main content, call-to-action buttons, and countdown timer configuration*
 
 #### 3. Action on Finish Settings
-![Finish Action Settings](screenshots/topbar-countdown-notice-settings-3-finish.png)
+![Finish Action Settings](screenshots/screenshot-5.png)
 *Define what happens when the countdown ends - hide bar or show alternative content*
 
 #### 4. Appearance Settings
-![Appearance Settings](screenshots/topbar-countdown-notice-settings-4-appearance.png)
+![Appearance Settings](screenshots/screenshot-6.png)
 *Customize colors, padding, and add custom CSS for advanced styling*
 
 ## ❓ Frequently Asked Questions
@@ -340,6 +340,18 @@ This plugin follows:
 - Security best practices (sanitization, escaping, nonce verification)
 
 ## 📝 Changelog
+
+### Version 1.0.3 (2024-12-07)
+
+**Added:**
+- Composer support with composer.json for Packagist installation
+- Upgrade Notice section in readme.txt for WordPress.org
+- Donate link support in plugin metadata
+
+**Improved:**
+- Screenshots renamed to WordPress.org standard format (screenshot-1.png, etc.)
+- Full WordPress.org readme validator compliance
+- Enhanced documentation for coupon reveal use cases
 
 ### Version 1.0.2 (2024-12-07)
 

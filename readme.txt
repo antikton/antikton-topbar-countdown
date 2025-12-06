@@ -3,10 +3,11 @@ Contributors: antikton
 Tags: topbar, countdown, notice, notification, schedule
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Donate link: https://www.buymeacoffee.com/antikton
 
 A fully functional WordPress plugin that displays a customizable top bar with optional countdown timer and advanced scheduling capabilities.
 
@@ -51,9 +52,22 @@ Absolutely! This is a popular use case. Set up a countdown to build anticipation
 
 == Screenshots ==
 
-(No screenshots provided yet)
+1. Active countdown bar displaying a limited-time offer with countdown timer
+2. Alternative content shown after countdown expires with discount code revealed
+3. General & Schedule settings panel - configure activation and scheduling
+4. Content & Countdown settings panel - set up messages and countdown timer
+5. Action on Finish settings panel - define what happens when countdown ends
+6. Appearance settings panel - customize colors, padding, and styling
 
 == Changelog ==
+
+= 1.0.3 =
+*   Added: Composer support with composer.json for Packagist installation
+*   Added: Upgrade Notice section for WordPress.org compliance
+*   Added: Donate link support in plugin metadata
+*   Improved: Screenshots renamed to WordPress.org standard format (screenshot-1.png through screenshot-6.png)
+*   Improved: Full WordPress.org readme validator compliance
+*   Improved: Enhanced documentation for coupon reveal use cases
 
 = 1.0.2 =
 *   Added: Comprehensive README.md documentation for GitHub
@@ -74,3 +88,17 @@ Absolutely! This is a popular use case. Set up a countdown to build anticipation
 *   Countdown timer functionality.
 *   Alternative content display.
 *   Full customization options.
+
+== Upgrade Notice ==
+
+= 1.0.3 =
+Added Composer support for easier installation via Packagist. Screenshots renamed to WordPress.org standard format. Full readme validator compliance achieved.
+
+= 1.0.2 =
+Enhanced documentation with comprehensive README.md, 6 professional screenshots, and detailed usage examples. Recommended update for better understanding of plugin features.
+
+= 1.0.1 =
+Important bug fix for alternative background color display. Security improvements and WordPress Plugin Check compatibility. Recommended update.
+
+= 1.0.0 =
+Initial release with full scheduling, countdown timer, and customization features.
