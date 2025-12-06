@@ -3,7 +3,7 @@ Contributors: antikton
 Tags: topbar, countdown, notice, notification, schedule
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -19,7 +19,7 @@ Topbar Countdown Notice is a lightweight yet powerful plugin that allows you to 
 *   **Global Top Bar:** Easily display a notification bar across your site.
 *   **Flexible Scheduling:** Set start and end dates/times for the bar to appear automatically.
 *   **Countdown Timer:** Drive urgency with a countdown timer targeting a specific date or the end date.
-*   **Alternative Content:** Choose to hide the bar or show different content (e.g., "Sale Ended") when the timer finishes.
+*   **Alternative Content:** Choose to hide the bar or show different content when the timer finishes (e.g., reveal discount coupons, announce "Sale is LIVE!", or show "Offer Ended" messages).
 *   **Full Customization:** visual control over background colors, text colors, and padding.
 *   **Rich Content Editor:** Use the familiar WordPress editor for your bar's content.
 
@@ -27,7 +27,7 @@ Topbar Countdown Notice is a lightweight yet powerful plugin that allows you to 
 
 When the countdown or scheduled time ends, you have full control:
 *   **Hide the bar:** The bar disappears automatically.
-*   **Show alternative content:** Replace the countdown/message with a new message and link (great for "Missed the sale?" or "Coming soon").
+*   **Show alternative content:** Replace the countdown/message with a new message and link (perfect for revealing discount codes when a sale starts, showing "Sale is LIVE!" messages, or displaying "Missed the sale?" notifications).
 
 == Installation ==
 
@@ -46,11 +46,19 @@ You can choose to either hide the bar completely or show an alternative message 
 = Is it mobile friendly? =
 Yes, the top bar is designed to be responsive and works on mobile devices.
 
+= Can I reveal a discount code after the countdown ends? =
+Absolutely! This is a popular use case. Set up a countdown to build anticipation, then use the "Show alternative content" option to reveal your discount code, coupon, or special offer when the timer reaches zero. You can even change the colors to make it stand out!
+
 == Screenshots ==
 
 (No screenshots provided yet)
 
 == Changelog ==
+
+= 1.0.2 =
+*   Added: Comprehensive README.md documentation for GitHub
+*   Added: 6 professional screenshots showing frontend and admin panels
+*   Improved: Enhanced documentation with usage examples and configuration details
 
 = 1.0.1 =
 *   Fixed: Alternative background color now applies correctly when content expires
