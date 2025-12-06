@@ -1,9 +1,9 @@
 === Topbar Countdown Notice ===
 Contributors: antikton
-Tags: topbar, countdown, notice, notification, schedule, bar
+Tags: topbar, countdown, notice, notification, schedule
 Requires at least: 5.0
-Tested up to: 6.7
-Stable tag: 1.0.0
+Tested up to: 6.9
+Stable tag: 1.0.1
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -51,6 +51,14 @@ Yes, the top bar is designed to be responsive and works on mobile devices.
 (No screenshots provided yet)
 
 == Changelog ==
+
+= 1.0.1 =
+*   Fixed: Alternative background color now applies correctly when content expires
+*   Improved: Full compatibility with WordPress Plugin Check (PCP)
+*   Improved: Removed deprecated load_plugin_textdomain function
+*   Improved: All outputs properly escaped for security
+*   Improved: Simplified codebase by removing unnecessary hooks
+*   Updated: Hook names now use proper WordPress prefix standards
 
 = 1.0.0 =
 *   Initial release.

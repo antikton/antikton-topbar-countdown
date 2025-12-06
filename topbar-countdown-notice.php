@@ -3,7 +3,7 @@
  * Plugin Name: Topbar Countdown Notice
  * Plugin URI: https://github.com/antikton/topbar-countdown-notice
  * Description: Display a customizable top bar with optional countdown timer and scheduling capabilities.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Eduardo Pagán
  * Author URI: https://github.com/antikton
  * Text Domain: topbar-countdown-notice
@@ -25,7 +25,7 @@ class Topbar_Countdown_Notice {
 	/**
 	 * Plugin version
 	 */
-	const VERSION = '1.0.0';
+	const VERSION = '1.0.1';
 
 	/**
 	 * Option name for settings
@@ -64,7 +64,7 @@ class Topbar_Countdown_Notice {
 	 */
     public static function load_textdomain() {
         // Load translations
-        $locale = apply_filters( 'plugin_locale', is_admin() && function_exists( 'get_user_locale' ) ? get_user_locale() : get_locale(), 'topbar-countdown-notice' );
+        $locale = apply_filters( 'topbar_countdown_notice_locale', is_admin() && function_exists( 'get_user_locale' ) ? get_user_locale() : get_locale(), 'topbar-countdown-notice' );
 
         // Load .mo file from wp-content/languages/plugins/ first
         $mofile = WP_LANG_DIR . '/plugins/' . 'topbar-countdown-notice' . '-' . $locale . '.mo';
@@ -81,12 +81,8 @@ class Topbar_Countdown_Notice {
             return load_textdomain( 'topbar-countdown-notice', $mofile );
         }
 
-        // Fallback to default .mo file
-        load_plugin_textdomain(
-                'topbar-countdown-notice',
-                false,
-                $plugin_dir . '/languages'
-        );
+        // WordPress.org automatically loads translations for plugins
+        // No need for load_plugin_textdomain since WordPress 4.6+
     }
 
 
@@ -787,8 +783,8 @@ class Topbar_Countdown_Notice {
 						<div class="postbox tcn-postbox">
 							<div class="postbox-header"><h2 class="hndle"><span class="dashicons dashicons-clock"></span> <?php esc_html_e( 'Server Time', 'topbar-countdown-notice' ); ?></h2></div>
 							<div class="inside">
-								<div id="tcn-server-time"><?php echo current_time( 'Y-m-d H:i:s' ); ?></div>
-								<input type="hidden" id="tcn-server-time-offset" value="<?php echo (time() - current_time('timestamp')); ?>">
+								<div id="tcn-server-time"><?php echo esc_html( current_time( 'Y-m-d H:i:s' ) ); ?></div>
+								<input type="hidden" id="tcn-server-time-offset" value="<?php echo esc_attr( time() - current_time('timestamp') ); ?>">
 							</div>
 						</div>
 
@@ -1040,7 +1036,7 @@ class Topbar_Countdown_Notice {
 		foreach ( (array) $wp_settings_sections[$page] as $section ) {
 			if ( in_array( $section['id'], $section_ids ) ) {
 				if ( $section['title'] ) {
-					echo "<h2>{$section['title']}</h2>\n";
+					echo '<h2>' . esc_html( $section['title'] ) . '</h2>';
 				}
 
 				if ( $section['callback'] ) {
@@ -1212,10 +1208,6 @@ class Topbar_Countdown_Notice {
 	 */
 	public static function should_display_bar() {
 		$settings = self::get_settings();
-		
-		// Apply filter to allow modifications
-		$settings = apply_filters( 'tcn_topbar_settings', $settings );
-		
 		// Check if active
 		if ( empty( $settings['active'] ) ) {
 			return false;
@@ -1380,10 +1372,12 @@ class Topbar_Countdown_Notice {
 	 * Display the top bar
 	 */
 	public static function display_topbar() {
-		// Check if already displayed
-		if ( did_action( 'tcn_topbar_displayed' ) ) {
+		// Use static variable to prevent displaying twice
+		static $displayed = false;
+		if ( $displayed ) {
 			return;
 		}
+		$displayed = true;
 		
 		// Check if should display
 		$show_normal = self::should_display_bar();
@@ -1394,8 +1388,6 @@ class Topbar_Countdown_Notice {
 		}
 		
 		$settings = self::get_settings();
-		$settings = apply_filters( 'tcn_topbar_settings', $settings );
-		
 		// Determine which content to show
 		$is_alternative = $show_alternative && ! $show_normal;
 		
@@ -1419,9 +1411,6 @@ class Topbar_Countdown_Notice {
 		$padding_right = isset( $settings['padding_right'] ) ? absint( $settings['padding_right'] ) : 20;
 		
 		ob_start();
-		
-		do_action( 'tcn_before_topbar', $settings );
-		
 		?>
 		<div id="tcn-topbar" class="tcn-topbar" role="banner" style="background-color: <?php echo esc_attr( $bg_color ); ?>; color: <?php echo esc_attr( $text_color ); ?>; padding: <?php echo esc_attr( $padding_top ); ?>px <?php echo esc_attr( $padding_right ); ?>px <?php echo esc_attr( $padding_bottom ); ?>px <?php echo esc_attr( $padding_left ); ?>px;">
 			<div class="tcn-topbar-inner">
@@ -1476,17 +1465,9 @@ class Topbar_Countdown_Notice {
 		</div>
 		<?php
 		
-		do_action( 'tcn_after_topbar', $settings );
-		
 		$html = ob_get_clean();
 		
-		// Apply filter to HTML
-		$html = apply_filters( 'tcn_topbar_html', $html, $settings );
-		
 		echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		
-		// Mark as displayed
-		do_action( 'tcn_topbar_displayed' );
 	}
 
 	/**
