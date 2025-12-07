@@ -12,12 +12,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      
       - name: Create Release
-        uses: ghalactic/github-release-from-tag@v5
+        uses: softprops/action-gh-release@v2
         with:
-          generateReleaseNotes: false
+          generate_release_notes: true
