@@ -3,7 +3,7 @@ Contributors: antikton
 Tags: topbar, countdown, notice, notification, schedule
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -61,6 +61,11 @@ Absolutely! This is a popular use case. Set up a countdown to build anticipation
 
 == Changelog ==
 
+= 1.0.7 =
+*   Added: Italian (it_IT) translation - Full plugin translation for Italian-speaking users
+*   Added: Brazilian Portuguese (pt_BR) translation - Full plugin translation for Brazilian users
+*   Improved: Major internationalization expansion covering Romance language family
+
 = 1.0.6 =
 *   Added: German (de_DE) translation - Full plugin translation for German-speaking users
 *   Improved: Expanded internationalization support with complete .po file for German language
@@ -103,6 +108,9 @@ Absolutely! This is a popular use case. Set up a countdown to build anticipation
 *   Full customization options.
 
 == Upgrade Notice ==
+
+= 1.0.7 =
+Added Italian (it_IT) and Brazilian Portuguese (pt_BR) translations. Plugin now available in 6 languages!
 
 = 1.0.6 =
 Added complete German translation (de_DE) for German-speaking users. Plugin now fully available in German.

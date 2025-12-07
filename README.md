@@ -1,6 +1,6 @@
 # Topbar Countdown Notice
 
-[![WordPress Plugin Version](https://img.shields.io/badge/version-1.0.6-blue.svg)](https://github.com/antikton/topbar-countdown-notice)
+[![WordPress Plugin Version](https://img.shields.io/badge/version-1.0.7-blue.svg)](https://github.com/antikton/topbar-countdown-notice)
 [![WordPress](https://img.shields.io/badge/wordpress-5.0%2B-blue.svg)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/php-7.4%2B-purple.svg)](https://php.net/)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -340,6 +340,16 @@ This plugin follows:
 - Security best practices (sanitization, escaping, nonce verification)
 
 ## 📝 Changelog
+
+### Version 1.0.7 (2024-12-07)
+
+**Added:**
+- Italian (it_IT) translation - Full plugin translation for Italian-speaking users
+- Brazilian Portuguese (pt_BR) translation - Full plugin translation for Brazilian users
+
+**Improved:**
+- Major internationalization expansion covering Romance language family
+- Plugin now available in 6 languages (English, Spanish, French, German, Italian, Portuguese)
 
 ### Version 1.0.6 (2024-12-07)
 

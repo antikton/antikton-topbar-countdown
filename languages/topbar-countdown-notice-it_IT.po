@@ -1,0 +1,348 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Topbar Countdown Notice\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-06 16:03+0000\n"
+"PO-Revision-Date: 2025-12-07 12:40+0100\n"
+"Last-Translator: \n"
+"Language-Team: Italiano\n"
+"Language: it_IT\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.0; wp-6.9; php-7.4.33\n"
+"X-Domain: topbar-countdown-notice"
+
+#: topbar-countdown-notice.php:651
+msgid "Action button/link"
+msgstr "Pulsante/link di azione"
+
+#: topbar-countdown-notice.php:167 topbar-countdown-notice.php:723
+msgid "Action on Finish"
+msgstr "Azione alla Fine"
+
+#: topbar-countdown-notice.php:129
+msgid "Activate Bar"
+msgstr "Attiva Barra"
+
+#: topbar-countdown-notice.php:289
+msgid "Activate Countdown"
+msgstr "Attiva Conto alla Rovescia"
+
+#: topbar-countdown-notice.php:644
+msgid "Add custom CSS to style the top bar. Available classes:"
+msgstr "Aggiungi CSS personalizzato per stilizzare la barra superiore. Classi disponibili:"
+
+#: topbar-countdown-notice.php:223
+msgid "Alternative Background Color"
+msgstr "Colore di Sfondo Alternativo"
+
+#: topbar-countdown-notice.php:214
+msgid "Alternative Colors"
+msgstr "Colori Alternativi"
+
+#: topbar-countdown-notice.php:194
+msgid "Alternative Link"
+msgstr "Link Alternativo"
+
+#: topbar-countdown-notice.php:204
+msgid "Alternative Link Button Text"
+msgstr "Testo del Pulsante Link Alternativo"
+
+#: topbar-countdown-notice.php:184
+msgid "Alternative Text"
+msgstr "Testo Alternativo"
+
+#: topbar-countdown-notice.php:233
+msgid "Alternative Text Color"
+msgstr "Colore del Testo Alternativo"
+
+#: topbar-countdown-notice.php:779
+msgid "Always test on smaller screens."
+msgstr "Testa sempre su schermi più piccoli."
+
+#: topbar-countdown-notice.php:338 topbar-countdown-notice.php:727
+msgid "Appearance"
+msgstr "Aspetto"
+
+#: topbar-countdown-notice.php:346
+msgid "Background Color"
+msgstr "Colore di Sfondo"
+
+#: topbar-countdown-notice.php:243
+msgid "Bar Content"
+msgstr "Contenuto della Barra"
+
+#: topbar-countdown-notice.php:781
+msgid "Clarity:"
+msgstr "Chiarezza:"
+
+#: topbar-countdown-notice.php:427
+msgid ""
+"Configure when the bar should be visible. Leave both empty to always show "
+"the bar."
+msgstr ""
+"Configura quando la barra deve essere visibile. Lascia entrambi vuoti per "
+"mostrare sempre la barra."
+
+#: topbar-countdown-notice.php:719
+msgid "Content & Countdown"
+msgstr "Contenuto e Conto alla Rovescia"
+
+#: topbar-countdown-notice.php:780
+msgid "Contrast:"
+msgstr "Contrasto:"
+
+#: topbar-countdown-notice.php:648
+msgid "Countdown container"
+msgstr "Contenitore del conto alla rovescia"
+
+#: topbar-countdown-notice.php:318
+msgid "Countdown Prefix Text"
+msgstr "Testo Prefisso del Conto alla Rovescia"
+
+#: topbar-countdown-notice.php:649
+msgid "Countdown prefix text"
+msgstr "Testo prefisso del conto alla rovescia"
+
+#: topbar-countdown-notice.php:299
+msgid "Countdown Target"
+msgstr "Obiettivo del Conto alla Rovescia"
+
+#: topbar-countdown-notice.php:281
+msgid "Countdown Timer"
+msgstr "Timer del Conto alla Rovescia"
+
+#: topbar-countdown-notice.php:650
+msgid "Countdown timer"
+msgstr "Timer del conto alla rovescia"
+
+#: topbar-countdown-notice.php:629
+msgid "Custom colors"
+msgstr "Colori personalizzati"
+
+#: topbar-countdown-notice.php:406
+msgid "Custom CSS"
+msgstr "CSS Personalizzato"
+
+#: topbar-countdown-notice.php:609
+msgid "Custom Date/Time"
+msgstr "Data/Ora Personalizzata"
+
+#: topbar-countdown-notice.php:308
+msgid "Custom Target Date/Time"
+msgstr "Data/Ora Obiettivo Personalizzata"
+
+#: topbar-countdown-notice.php:1356
+msgid "d"
+msgstr "g"
+
+#: topbar-countdown-notice.php:415
+msgid "Debug Mode"
+msgstr "Modalità Debug"
+
+#. Description of the plugin
+msgid ""
+"Display a customizable top bar with optional countdown timer and scheduling "
+"capabilities."
+msgstr ""
+"Visualizza una barra superiore personalizzabile con timer del conto alla "
+"rovescia opzionale e funzionalità di pianificazione."
+
+#: topbar-countdown-notice.php:332
+msgid "Display seconds in countdown"
+msgstr "Visualizza i secondi nel conto alla rovescia"
+
+#. Author of the plugin
+msgid "Eduardo Pagán"
+msgstr "Eduardo Pagán"
+
+#: topbar-countdown-notice.php:157
+msgid "End Date/Time"
+msgstr "Data/Ora di Fine"
+
+#: topbar-countdown-notice.php:780
+msgid "Ensure text is readable."
+msgstr "Assicurati che il testo sia leggibile."
+
+#: topbar-countdown-notice.php:715
+msgid "General & Schedule"
+msgstr "Generale e Pianificazione"
+
+#: topbar-countdown-notice.php:121
+msgid "General Settings"
+msgstr "Impostazioni Generali"
+
+#: topbar-countdown-notice.php:802
+msgid "Get Support"
+msgstr "Ottieni Supporto"
+
+#: topbar-countdown-notice.php:1357
+msgid "h"
+msgstr "h"
+
+#: topbar-countdown-notice.php:481
+msgid "Hide the bar"
+msgstr "Nascondi la barra"
+
+#. Author URI of the plugin
+msgid "https://github.com/antikton"
+msgstr "https://github.com/antikton"
+
+#. URI of the plugin
+msgid "https://github.com/antikton/topbar-countdown-notice"
+msgstr "https://github.com/antikton/topbar-countdown-notice"
+
+#: topbar-countdown-notice.php:646
+msgid "Inner content wrapper"
+msgstr "Wrapper del contenuto interno"
+
+#: topbar-countdown-notice.php:781
+msgid "Keep messages short and sweet."
+msgstr "Mantieni i messaggi brevi e concisi."
+
+#: topbar-countdown-notice.php:208 topbar-countdown-notice.php:275
+#: topbar-countdown-notice.php:1184 topbar-countdown-notice.php:1188
+#: topbar-countdown-notice.php:1365 topbar-countdown-notice.php:1427
+#: topbar-countdown-notice.php:1460
+msgid "Learn More"
+msgstr "Scopri di Più"
+
+#: topbar-countdown-notice.php:1358
+msgid "m"
+msgstr "m"
+
+#: topbar-countdown-notice.php:645
+msgid "Main bar container"
+msgstr "Contenitore principale della barra"
+
+#: topbar-countdown-notice.php:251
+msgid "Main Content"
+msgstr "Contenuto Principale"
+
+#: topbar-countdown-notice.php:647
+msgid "Main content area"
+msgstr "Area del contenuto principale"
+
+#: topbar-countdown-notice.php:261
+msgid "Main Link"
+msgstr "Link Principale"
+
+#: topbar-countdown-notice.php:271
+msgid "Main Link Button Text"
+msgstr "Testo del Pulsante Link Principale"
+
+#: topbar-countdown-notice.php:779
+msgid "Mobile:"
+msgstr "Mobile:"
+
+#: topbar-countdown-notice.php:799
+msgid "Need help or have a feature request?"
+msgstr "Hai bisogno di aiuto o hai una richiesta di funzionalità?"
+
+#: topbar-countdown-notice.php:536
+msgid "Open in new tab"
+msgstr "Apri in una nuova scheda"
+
+#: topbar-countdown-notice.php:376
+msgid "Padding Bottom (px)"
+msgstr "Padding Inferiore (px)"
+
+#: topbar-countdown-notice.php:386
+msgid "Padding Left (px)"
+msgstr "Padding Sinistro (px)"
+
+#: topbar-countdown-notice.php:396
+msgid "Padding Right (px)"
+msgstr "Padding Destro (px)"
+
+#: topbar-countdown-notice.php:366
+msgid "Padding Top (px)"
+msgstr "Padding Superiore (px)"
+
+#: topbar-countdown-notice.php:775
+msgid "Quick Tips"
+msgstr "Suggerimenti Rapidi"
+
+#: topbar-countdown-notice.php:1359
+msgid "s"
+msgstr "s"
+
+#: topbar-countdown-notice.php:604
+msgid "Same as End Date/Time"
+msgstr "Uguale a Data/Ora di Fine"
+
+#: topbar-countdown-notice.php:624
+msgid "Same as main colors"
+msgstr "Uguale ai colori principali"
+
+#: topbar-countdown-notice.php:765
+msgid "Save Changes"
+msgstr "Salva Modifiche"
+
+#: topbar-countdown-notice.php:139
+msgid "Scheduling"
+msgstr "Pianificazione"
+
+#: topbar-countdown-notice.php:788
+msgid "Server Time"
+msgstr "Ora del Server"
+
+#: topbar-countdown-notice.php:486
+msgid "Show alternative content"
+msgstr "Mostra contenuto alternativo"
+
+#: topbar-countdown-notice.php:419
+msgid "Show console.log messages in browser (for debugging)"
+msgstr "Mostra messaggi console.log nel browser (per il debug)"
+
+#: topbar-countdown-notice.php:293
+msgid "Show countdown timer"
+msgstr "Mostra timer del conto alla rovescia"
+
+#: topbar-countdown-notice.php:328
+msgid "Show Seconds"
+msgstr "Mostra Secondi"
+
+#: topbar-countdown-notice.php:133
+msgid "Show the top bar"
+msgstr "Mostra la barra superiore"
+
+#: topbar-countdown-notice.php:147
+msgid "Start Date/Time"
+msgstr "Data/Ora di Inizio"
+
+#: topbar-countdown-notice.php:797
+msgid "Support"
+msgstr "Supporto"
+
+#: topbar-countdown-notice.php:356
+msgid "Text Color"
+msgstr "Colore del Testo"
+
+#: topbar-countdown-notice.php:99
+msgid "Topbar Countdown"
+msgstr "Conto alla Rovescia Superiore"
+
+#. Name of the plugin
+#: topbar-countdown-notice.php:98
+msgid "Topbar Countdown Notice"
+msgstr "Barra Superiore con Conto alla Rovescia"
+
+#: topbar-countdown-notice.php:778
+msgid "Urgency:"
+msgstr "Urgenza:"
+
+#: topbar-countdown-notice.php:778
+msgid "Use the countdown to drive action."
+msgstr "Usa il conto alla rovescia per stimolare l'azione."
+
+#: topbar-countdown-notice.php:175
+msgid "When End Date/Time is Reached"
+msgstr "Quando si Raggiunge la Data/Ora di Fine"
+
+#: topbar-countdown-notice.php:591
+msgid "You can use HTML tags like <strong>, <em>, <span>, etc."
+msgstr "Puoi usare tag HTML come <strong>, <em>, <span>, ecc."
