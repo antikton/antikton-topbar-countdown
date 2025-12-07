@@ -346,3 +346,225 @@ msgstr "Wanneer Einddatum/Tijd Bereikt is"
 #: topbar-countdown-notice.php:591
 msgid "You can use HTML tags like <strong>, <em>, <span>, etc."
 msgstr "Je kunt HTML-tags gebruiken zoals <strong>, <em>, <span>, enz."
+
+msgid "Help & Ideas"
+msgstr "Hulp & Ideeën"
+
+msgid "Configuration Ideas & Examples"
+msgstr "Configuratie-ideeën & Voorbeelden"
+
+msgid "Get inspired with these practical examples for different seasons and use cases. These are just ideas - customize them to fit your needs!"
+msgstr "Laat je inspireren door deze praktische voorbeelden voor verschillende seizoenen en gebruikssituaties. Dit zijn slechts ideeën - pas ze aan naar jouw behoeften!"
+
+msgid "Seasonal Campaigns"
+msgstr "Seizoenscampagnes"
+
+msgid "Christmas Sale (December)"
+msgstr "Kerstuitverkoop (December)"
+
+msgid "Christmas Sale! Up to 50% OFF on all products"
+msgstr "Kerstuitverkoop! Tot 50% KORTING op alle producten"
+
+msgid "December 1st, 00:00"
+msgstr "1 December, 00:00"
+
+msgid "December 25th, 23:59"
+msgstr "25 December, 23:59"
+
+msgid "Active, targeting End Date"
+msgstr "Actief, gericht op Einddatum"
+
+msgid "Red background (#c41e3a), White text"
+msgstr "Rode achtergrond (#c41e3a), Witte tekst"
+
+msgid "New Year Countdown (December 31st)"
+msgstr "Nieuwjaarsaftelling (31 December)"
+
+msgid "New Year is coming!"
+msgstr "Het nieuwe jaar komt eraan!"
+
+msgid "December 31st, 00:00"
+msgstr "31 December, 00:00"
+
+msgid "January 1st, 00:00"
+msgstr "1 Januari, 00:00"
+
+msgid "Active, show seconds"
+msgstr "Actief, toon seconden"
+
+msgid "Alternative Content:"
+msgstr "Alternatieve Inhoud:"
+
+msgid "Happy New Year! 20% OFF with code: NEWYEAR"
+msgstr "Gelukkig Nieuwjaar! 20% KORTING met code: NEWYEAR"
+
+msgid "Gold background (#ffd700), Black text"
+msgstr "Gouden achtergrond (#ffd700), Zwarte tekst"
+
+msgid "Valentine's Day (February 14th)"
+msgstr "Valentijnsdag (14 Februari)"
+
+msgid "Valentine's Day Special - Perfect gifts for your loved ones"
+msgstr "Valentijnsdag Special - Perfecte cadeaus voor je geliefden"
+
+msgid "February 7th, 00:00"
+msgstr "7 Februari, 00:00"
+
+msgid "February 14th, 23:59"
+msgstr "14 Februari, 23:59"
+
+msgid "Pink background (#ff69b4), White text"
+msgstr "Roze achtergrond (#ff69b4), Witte tekst"
+
+msgid "Black Friday (November)"
+msgstr "Black Friday (November)"
+
+msgid "BLACK FRIDAY - Up to 70% OFF!"
+msgstr "BLACK FRIDAY - Tot 70% KORTING!"
+
+msgid "Last Friday of November, 00:00"
+msgstr "Laatste vrijdag van November, 00:00"
+
+msgid "Sunday after Black Friday, 23:59"
+msgstr "Zondag na Black Friday, 23:59"
+
+msgid "Black background (#000000), Yellow text (#ffeb3b)"
+msgstr "Zwarte achtergrond (#000000), Gele tekst (#ffeb3b)"
+
+msgid "Spring Sale (March-April)"
+msgstr "Lente-uitverkoop (Maart-April)"
+
+msgid "Spring Collection - Fresh arrivals now available!"
+msgstr "Lentecollectie - Nieuwe artikelen nu beschikbaar!"
+
+msgid "March 20th, 00:00"
+msgstr "20 Maart, 00:00"
+
+msgid "April 30th, 23:59"
+msgstr "30 April, 23:59"
+
+msgid "Light green background (#90ee90), Dark green text (#006400)"
+msgstr "Lichtgroene achtergrond (#90ee90), Donkergroene tekst (#006400)"
+
+msgid "Summer Sale (July-August)"
+msgstr "Zomeruitverkoop (Juli-Augustus)"
+
+msgid "Summer Sale - Beat the heat with hot deals!"
+msgstr "Zomeruitverkoop - Versla de hitte met hete deals!"
+
+msgid "July 1st, 00:00"
+msgstr "1 Juli, 00:00"
+
+msgid "August 31st, 23:59"
+msgstr "31 Augustus, 23:59"
+
+msgid "Orange background (#ff8c00), White text"
+msgstr "Oranje achtergrond (#ff8c00), Witte tekst"
+
+msgid "Product Launches & Events"
+msgstr "Productlanceringen & Evenementen"
+
+msgid "Product Launch Countdown"
+msgstr "Productlancering Aftelling"
+
+msgid "New product launching soon!"
+msgstr "Nieuw product komt binnenkort!"
+
+msgid "Active, targeting launch date"
+msgstr "Actief, gericht op lanceringsdatum"
+
+msgid "NOW AVAILABLE! Get 20% OFF with code: LAUNCH20"
+msgstr "NU BESCHIKBAAR! Krijg 20% KORTING met code: LAUNCH20"
+
+msgid "Alternative Colors:"
+msgstr "Alternatieve Kleuren:"
+
+msgid "Green background to indicate \"live\""
+msgstr "Groene achtergrond om \"live\" aan te geven"
+
+msgid "Webinar/Event Registration"
+msgstr "Webinar/Evenement Registratie"
+
+msgid "Free Webinar: Marketing Strategies 2024"
+msgstr "Gratis Webinar: Marketingstrategieën 2024"
+
+msgid "Active, targeting event start"
+msgstr "Actief, gericht op evenement start"
+
+msgid "Show alternative: \"Event is LIVE! Join now\""
+msgstr "Toon alternatief: \"Evenement is LIVE! Doe nu mee\""
+
+msgid "Coupon Reveal"
+msgstr "Coupon Onthulling"
+
+msgid "Secret discount code reveals in..."
+msgstr "Geheime kortingscode wordt onthuld over..."
+
+msgid "Use code SAVE30 for 30% OFF!"
+msgstr "Gebruik code SAVE30 voor 30% KORTING!"
+
+msgid "Bright color to grab attention"
+msgstr "Felle kleur om aandacht te trekken"
+
+msgid "Informational & Announcements"
+msgstr "Informatief & Aankondigingen"
+
+msgid "Maintenance Notice"
+msgstr "Onderhoudsmelding"
+
+msgid "Scheduled maintenance tonight 10 PM - 2 AM"
+msgstr "Gepland onderhoud vanavond 22:00 - 02:00"
+
+msgid "Day before maintenance, 08:00"
+msgstr "Dag voor onderhoud, 08:00"
+
+msgid "Maintenance end time"
+msgstr "Einde onderhoudstijd"
+
+msgid "Orange background (#ff9800), Black text"
+msgstr "Oranje achtergrond (#ff9800), Zwarte tekst"
+
+msgid "Important Announcement"
+msgstr "Belangrijke Aankondiging"
+
+msgid "New shipping policy - Free shipping on orders over $50"
+msgstr "Nieuw verzendbeleid - Gratis verzending bij bestellingen boven $50"
+
+msgid "Empty (always show)"
+msgstr "Leeg (altijd tonen)"
+
+msgid "Empty (permanent)"
+msgstr "Leeg (permanent)"
+
+msgid "Course Enrollment Deadline"
+msgstr "Cursusinschrijving Deadline"
+
+msgid "Last chance to enroll! Course starts soon"
+msgstr "Laatste kans om in te schrijven! Cursus begint binnenkort"
+
+msgid "Active, targeting enrollment deadline"
+msgstr "Actief, gericht op inschrijvingsdeadline"
+
+msgid "Pro Tips"
+msgstr "Pro Tips"
+
+msgid "Use emojis to make your messages more eye-catching and friendly"
+msgstr "Gebruik emoji's om je berichten opvallender en vriendelijker te maken"
+
+msgid "Match colors with your brand or the season/event theme"
+msgstr "Stem kleuren af op je merk of het seizoen/evenement thema"
+
+msgid "Show seconds in countdown for last-minute urgency (last 24 hours)"
+msgstr "Toon seconden in aftelling voor last-minute urgentie (laatste 24 uur)"
+
+msgid "Use alternative content to reveal special offers or discount codes"
+msgstr "Gebruik alternatieve inhoud om speciale aanbiedingen of kortingscodes te onthullen"
+
+msgid "Always test on mobile devices - keep messages short!"
+msgstr "Test altijd op mobiele apparaten - houd berichten kort!"
+
+msgid "Create urgency with phrases like \"Limited time\", \"Last chance\", \"Ending soon\""
+msgstr "Creëer urgentie met zinnen als \"Beperkte tijd\", \"Laatste kans\", \"Eindigt binnenkort\""
+
+msgid "Change bar colors when countdown ends to grab attention"
+msgstr "Verander balkleuren wanneer aftelling eindigt om aandacht te trekken"

@@ -346,3 +346,225 @@ msgstr "Cuando se Alcance la Fecha/Hora de Fin"
 #: topbar-countdown-notice.php:591
 msgid "You can use HTML tags like <strong>, <em>, <span>, etc."
 msgstr "Puedes usar etiquetas HTML como <strong>, <em>, <span>, etc."
+
+msgid "Help & Ideas"
+msgstr "Ayuda e Ideas"
+
+msgid "Configuration Ideas & Examples"
+msgstr "Ideas de Configuración y Ejemplos"
+
+msgid "Get inspired with these practical examples for different seasons and use cases. These are just ideas - customize them to fit your needs!"
+msgstr "Inspírate con estos ejemplos prácticos para diferentes temporadas y casos de uso. ¡Son solo ideas - personalízalas según tus necesidades!"
+
+msgid "Seasonal Campaigns"
+msgstr "Campañas Estacionales"
+
+msgid "Christmas Sale (December)"
+msgstr "Venta de Navidad (Diciembre)"
+
+msgid "Christmas Sale! Up to 50% OFF on all products"
+msgstr "¡Venta de Navidad! Hasta 50% de DESCUENTO en todos los productos"
+
+msgid "December 1st, 00:00"
+msgstr "1 de Diciembre, 00:00"
+
+msgid "December 25th, 23:59"
+msgstr "25 de Diciembre, 23:59"
+
+msgid "Active, targeting End Date"
+msgstr "Activo, apuntando a Fecha de Fin"
+
+msgid "Red background (#c41e3a), White text"
+msgstr "Fondo rojo (#c41e3a), Texto blanco"
+
+msgid "New Year Countdown (December 31st)"
+msgstr "Cuenta Regresiva de Año Nuevo (31 de Diciembre)"
+
+msgid "New Year is coming!"
+msgstr "¡Se acerca el Año Nuevo!"
+
+msgid "December 31st, 00:00"
+msgstr "31 de Diciembre, 00:00"
+
+msgid "January 1st, 00:00"
+msgstr "1 de Enero, 00:00"
+
+msgid "Active, show seconds"
+msgstr "Activo, mostrar segundos"
+
+msgid "Alternative Content:"
+msgstr "Contenido Alternativo:"
+
+msgid "Happy New Year! 20% OFF with code: NEWYEAR"
+msgstr "¡Feliz Año Nuevo! 20% de DESCUENTO con código: NEWYEAR"
+
+msgid "Gold background (#ffd700), Black text"
+msgstr "Fondo dorado (#ffd700), Texto negro"
+
+msgid "Valentine's Day (February 14th)"
+msgstr "Día de San Valentín (14 de Febrero)"
+
+msgid "Valentine's Day Special - Perfect gifts for your loved ones"
+msgstr "Especial de San Valentín - Regalos perfectos para tus seres queridos"
+
+msgid "February 7th, 00:00"
+msgstr "7 de Febrero, 00:00"
+
+msgid "February 14th, 23:59"
+msgstr "14 de Febrero, 23:59"
+
+msgid "Pink background (#ff69b4), White text"
+msgstr "Fondo rosa (#ff69b4), Texto blanco"
+
+msgid "Black Friday (November)"
+msgstr "Black Friday (Noviembre)"
+
+msgid "BLACK FRIDAY - Up to 70% OFF!"
+msgstr "BLACK FRIDAY - ¡Hasta 70% de DESCUENTO!"
+
+msgid "Last Friday of November, 00:00"
+msgstr "Último viernes de Noviembre, 00:00"
+
+msgid "Sunday after Black Friday, 23:59"
+msgstr "Domingo después del Black Friday, 23:59"
+
+msgid "Black background (#000000), Yellow text (#ffeb3b)"
+msgstr "Fondo negro (#000000), Texto amarillo (#ffeb3b)"
+
+msgid "Spring Sale (March-April)"
+msgstr "Venta de Primavera (Marzo-Abril)"
+
+msgid "Spring Collection - Fresh arrivals now available!"
+msgstr "Colección de Primavera - ¡Nuevas llegadas disponibles!"
+
+msgid "March 20th, 00:00"
+msgstr "20 de Marzo, 00:00"
+
+msgid "April 30th, 23:59"
+msgstr "30 de Abril, 23:59"
+
+msgid "Light green background (#90ee90), Dark green text (#006400)"
+msgstr "Fondo verde claro (#90ee90), Texto verde oscuro (#006400)"
+
+msgid "Summer Sale (July-August)"
+msgstr "Venta de Verano (Julio-Agosto)"
+
+msgid "Summer Sale - Beat the heat with hot deals!"
+msgstr "Venta de Verano - ¡Combate el calor con ofertas candentes!"
+
+msgid "July 1st, 00:00"
+msgstr "1 de Julio, 00:00"
+
+msgid "August 31st, 23:59"
+msgstr "31 de Agosto, 23:59"
+
+msgid "Orange background (#ff8c00), White text"
+msgstr "Fondo naranja (#ff8c00), Texto blanco"
+
+msgid "Product Launches & Events"
+msgstr "Lanzamientos de Productos y Eventos"
+
+msgid "Product Launch Countdown"
+msgstr "Cuenta Regresiva de Lanzamiento de Producto"
+
+msgid "New product launching soon!"
+msgstr "¡Nuevo producto lanzándose pronto!"
+
+msgid "Active, targeting launch date"
+msgstr "Activo, apuntando a fecha de lanzamiento"
+
+msgid "NOW AVAILABLE! Get 20% OFF with code: LAUNCH20"
+msgstr "¡YA DISPONIBLE! Obtén 20% de DESCUENTO con código: LAUNCH20"
+
+msgid "Alternative Colors:"
+msgstr "Colores Alternativos:"
+
+msgid "Green background to indicate \"live\""
+msgstr "Fondo verde para indicar \"en vivo\""
+
+msgid "Webinar/Event Registration"
+msgstr "Registro de Webinar/Evento"
+
+msgid "Free Webinar: Marketing Strategies 2024"
+msgstr "Webinar Gratuito: Estrategias de Marketing 2024"
+
+msgid "Active, targeting event start"
+msgstr "Activo, apuntando al inicio del evento"
+
+msgid "Show alternative: \"Event is LIVE! Join now\""
+msgstr "Mostrar alternativo: \"¡El evento está EN VIVO! Únete ahora\""
+
+msgid "Coupon Reveal"
+msgstr "Revelación de Cupón"
+
+msgid "Secret discount code reveals in..."
+msgstr "El código de descuento secreto se revela en..."
+
+msgid "Use code SAVE30 for 30% OFF!"
+msgstr "¡Usa el código SAVE30 para 30% de DESCUENTO!"
+
+msgid "Bright color to grab attention"
+msgstr "Color brillante para captar la atención"
+
+msgid "Informational & Announcements"
+msgstr "Informativos y Anuncios"
+
+msgid "Maintenance Notice"
+msgstr "Aviso de Mantenimiento"
+
+msgid "Scheduled maintenance tonight 10 PM - 2 AM"
+msgstr "Mantenimiento programado esta noche 10 PM - 2 AM"
+
+msgid "Day before maintenance, 08:00"
+msgstr "Día antes del mantenimiento, 08:00"
+
+msgid "Maintenance end time"
+msgstr "Hora de fin del mantenimiento"
+
+msgid "Orange background (#ff9800), Black text"
+msgstr "Fondo naranja (#ff9800), Texto negro"
+
+msgid "Important Announcement"
+msgstr "Anuncio Importante"
+
+msgid "New shipping policy - Free shipping on orders over $50"
+msgstr "Nueva política de envío - Envío gratis en pedidos superiores a $50"
+
+msgid "Empty (always show)"
+msgstr "Vacío (mostrar siempre)"
+
+msgid "Empty (permanent)"
+msgstr "Vacío (permanente)"
+
+msgid "Course Enrollment Deadline"
+msgstr "Fecha Límite de Inscripción al Curso"
+
+msgid "Last chance to enroll! Course starts soon"
+msgstr "¡Última oportunidad para inscribirse! El curso comienza pronto"
+
+msgid "Active, targeting enrollment deadline"
+msgstr "Activo, apuntando a la fecha límite de inscripción"
+
+msgid "Pro Tips"
+msgstr "Consejos Profesionales"
+
+msgid "Use emojis to make your messages more eye-catching and friendly"
+msgstr "Usa emojis para hacer tus mensajes más llamativos y amigables"
+
+msgid "Match colors with your brand or the season/event theme"
+msgstr "Combina los colores con tu marca o el tema de la temporada/evento"
+
+msgid "Show seconds in countdown for last-minute urgency (last 24 hours)"
+msgstr "Muestra segundos en la cuenta regresiva para urgencia de último minuto (últimas 24 horas)"
+
+msgid "Use alternative content to reveal special offers or discount codes"
+msgstr "Usa contenido alternativo para revelar ofertas especiales o códigos de descuento"
+
+msgid "Always test on mobile devices - keep messages short!"
+msgstr "¡Siempre prueba en dispositivos móviles - mantén los mensajes cortos!"
+
+msgid "Create urgency with phrases like \"Limited time\", \"Last chance\", \"Ending soon\""
+msgstr "Crea urgencia con frases como \"Tiempo limitado\", \"Última oportunidad\", \"Termina pronto\""
+
+msgid "Change bar colors when countdown ends to grab attention"
+msgstr "Cambia los colores de la barra cuando termine la cuenta regresiva para captar la atención"

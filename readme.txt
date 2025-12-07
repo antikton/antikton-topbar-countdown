@@ -3,7 +3,7 @@ Contributors: antikton
 Tags: topbar, countdown, notice, notification, schedule
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -61,6 +61,28 @@ Absolutely! This is a popular use case. Set up a countdown to build anticipation
 
 == Changelog ==
 
+= 1.0.9 =
+*   Added: New "Help & Ideas" tab in settings with practical configuration examples
+*   Added: 12 seasonal campaign examples (Christmas, New Year, Valentine's, Black Friday, Spring, Summer)
+*   Added: Product launch and event registration examples (Product Launch, Webinar, Coupon Reveal)
+*   Added: Informational announcements examples (Maintenance Notice, Important Announcements, Course Deadlines)
+*   Added: 7 professional tips for creating effective countdown bars
+*   Added: Beautiful gradient design for tips section with interactive hover effects
+*   Added: Color suggestions with hex codes for each example
+*   Improved: Enhanced user experience with visual, categorized examples
+*   Improved: Better onboarding for new users with ready-to-use templates
+*   Translation: Updated ALL 9 language files with 60+ new strings for Help & Ideas tab
+*   Translation: Spanish (es_ES) - Complete translation of all new content
+*   Translation: French (fr_FR) - Complete translation of all new content
+*   Translation: German (de_DE) - Complete translation of all new content
+*   Translation: Italian (it_IT) - Complete translation of all new content
+*   Translation: Brazilian Portuguese (pt_BR) - Complete translation of all new content
+*   Translation: Dutch (nl_NL) - Complete translation of all new content
+*   Translation: Russian (ru_RU) - Complete translation with Cyrillic alphabet
+*   Translation: Japanese (ja) - Complete translation with Japanese characters
+*   Translation: Polish (pl_PL) - Complete translation with Polish plural forms
+*   Translation: Total of 540+ new translation strings added across all languages
+
 = 1.0.8 =
 *   Added: Dutch (nl_NL) translation - Full plugin translation for Dutch-speaking users
 *   Added: Russian (ru_RU) translation - Full plugin translation with Cyrillic alphabet support
@@ -116,6 +138,9 @@ Absolutely! This is a popular use case. Set up a countdown to build anticipation
 *   Full customization options.
 
 == Upgrade Notice ==
+
+= 1.0.9 =
+Major update! New "Help & Ideas" tab with 12+ practical examples for seasonal campaigns, product launches, and events. ALL 9 language files updated with 540+ new translation strings. Complete internationalization for Help & Ideas feature.
 
 = 1.0.8 =
 Major update! Added 4 new languages: Dutch, Russian, Japanese, and Polish. Plugin now available in 10 languages covering 80%+ of WordPress users worldwide!

@@ -3,7 +3,7 @@
  * Plugin Name: Topbar Countdown Notice
  * Plugin URI: https://github.com/antikton/topbar-countdown-notice
  * Description: Display a customizable top bar with optional countdown timer and scheduling capabilities.
- * Version: 1.0.8
+ * Version: 1.0.9
  * Author: Eduardo Pagán
  * Author URI: https://github.com/antikton
  * Text Domain: topbar-countdown-notice
@@ -25,7 +25,7 @@ class Topbar_Countdown_Notice {
 	/**
 	 * Plugin version
 	 */
-	const VERSION = '1.0.8';
+	const VERSION = '1.0.9';
 
 	/**
 	 * Option name for settings
@@ -676,6 +676,261 @@ class Topbar_Countdown_Notice {
 	}
 
 	/**
+	 * Render Help & Ideas tab content
+	 */
+	public static function render_help_ideas_tab() {
+		?>
+		<div class="tcn-help-ideas-wrapper">
+			<div class="tcn-help-intro">
+				<h2><?php esc_html_e( 'Configuration Ideas & Examples', 'topbar-countdown-notice' ); ?></h2>
+				<p><?php esc_html_e( 'Get inspired with these practical examples for different seasons and use cases. These are just ideas - customize them to fit your needs!', 'topbar-countdown-notice' ); ?></p>
+			</div>
+
+			<!-- Seasonal Campaigns -->
+			<div class="tcn-idea-category">
+				<h3><span class="dashicons dashicons-calendar-alt"></span> <?php esc_html_e( 'Seasonal Campaigns', 'topbar-countdown-notice' ); ?></h3>
+				
+				<div class="tcn-idea-card">
+					<h4>🎄 <?php esc_html_e( 'Christmas Sale (December)', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "🎅 <?php esc_html_e( 'Christmas Sale! Up to 50% OFF on all products', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Start Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'December 1st, 00:00', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'End Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'December 25th, 23:59', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Active, targeting End Date', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Action on Finish:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Hide the bar', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Colors:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Red background (#c41e3a), White text', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+
+				<div class="tcn-idea-card">
+					<h4>🎆 <?php esc_html_e( 'New Year Countdown (December 31st)', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "🎉 <?php esc_html_e( 'New Year is coming!', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Start Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'December 31st, 00:00', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'End Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'January 1st, 00:00', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Active, show seconds', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Alternative Content:', 'topbar-countdown-notice' ); ?></strong> "🎊 <?php esc_html_e( 'Happy New Year! 20% OFF with code: NEWYEAR', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Colors:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Gold background (#ffd700), Black text', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+
+				<div class="tcn-idea-card">
+					<h4>❤️ <?php esc_html_e( 'Valentine\'s Day (February 14th)', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "💝 <?php esc_html_e( 'Valentine\'s Day Special - Perfect gifts for your loved ones', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Start Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'February 7th, 00:00', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'End Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'February 14th, 23:59', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Active', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Colors:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Pink background (#ff69b4), White text', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+
+				<div class="tcn-idea-card">
+					<h4>🛍️ <?php esc_html_e( 'Black Friday (November)', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "⚡ <?php esc_html_e( 'BLACK FRIDAY - Up to 70% OFF!', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Start Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Last Friday of November, 00:00', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'End Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Sunday after Black Friday, 23:59', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Active, show seconds', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Colors:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Black background (#000000), Yellow text (#ffeb3b)', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+
+				<div class="tcn-idea-card">
+					<h4>🌸 <?php esc_html_e( 'Spring Sale (March-April)', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "🌺 <?php esc_html_e( 'Spring Collection - Fresh arrivals now available!', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Start Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'March 20th, 00:00', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'End Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'April 30th, 23:59', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Disabled', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Colors:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Light green background (#90ee90), Dark green text (#006400)', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+
+				<div class="tcn-idea-card">
+					<h4>☀️ <?php esc_html_e( 'Summer Sale (July-August)', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "🏖️ <?php esc_html_e( 'Summer Sale - Beat the heat with hot deals!', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Start Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'July 1st, 00:00', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'End Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'August 31st, 23:59', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Colors:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Orange background (#ff8c00), White text', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Product Launches -->
+			<div class="tcn-idea-category">
+				<h3><span class="dashicons dashicons-products"></span> <?php esc_html_e( 'Product Launches & Events', 'topbar-countdown-notice' ); ?></h3>
+				
+				<div class="tcn-idea-card">
+					<h4>🚀 <?php esc_html_e( 'Product Launch Countdown', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "🎯 <?php esc_html_e( 'New product launching soon!', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Active, targeting launch date', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Alternative Content:', 'topbar-countdown-notice' ); ?></strong> "✨ <?php esc_html_e( 'NOW AVAILABLE! Get 20% OFF with code: LAUNCH20', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Alternative Colors:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Green background to indicate "live"', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+
+				<div class="tcn-idea-card">
+					<h4>🎫 <?php esc_html_e( 'Webinar/Event Registration', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "📅 <?php esc_html_e( 'Free Webinar: Marketing Strategies 2024', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Active, targeting event start', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Action on Finish:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Show alternative: "Event is LIVE! Join now"', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+
+				<div class="tcn-idea-card">
+					<h4>🎁 <?php esc_html_e( 'Coupon Reveal', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "🔒 <?php esc_html_e( 'Secret discount code reveals in...', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Active, show seconds', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Alternative Content:', 'topbar-countdown-notice' ); ?></strong> "🎉 <?php esc_html_e( 'Use code SAVE30 for 30% OFF!', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Alternative Colors:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Bright color to grab attention', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Informational -->
+			<div class="tcn-idea-category">
+				<h3><span class="dashicons dashicons-info"></span> <?php esc_html_e( 'Informational & Announcements', 'topbar-countdown-notice' ); ?></h3>
+				
+				<div class="tcn-idea-card">
+					<h4>⚠️ <?php esc_html_e( 'Maintenance Notice', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "🔧 <?php esc_html_e( 'Scheduled maintenance tonight 10 PM - 2 AM', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Start Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Day before maintenance, 08:00', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'End Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Maintenance end time', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Disabled', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Colors:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Orange background (#ff9800), Black text', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+
+				<div class="tcn-idea-card">
+					<h4>📢 <?php esc_html_e( 'Important Announcement', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "📣 <?php esc_html_e( 'New shipping policy - Free shipping on orders over $50', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Start Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Empty (always show)', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'End Date:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Empty (permanent)', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Disabled', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+
+				<div class="tcn-idea-card">
+					<h4>🎓 <?php esc_html_e( 'Course Enrollment Deadline', 'topbar-countdown-notice' ); ?></h4>
+					<div class="tcn-idea-content">
+						<p><strong><?php esc_html_e( 'Main Content:', 'topbar-countdown-notice' ); ?></strong> "📚 <?php esc_html_e( 'Last chance to enroll! Course starts soon', 'topbar-countdown-notice' ); ?>"</p>
+						<p><strong><?php esc_html_e( 'Countdown:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Active, targeting enrollment deadline', 'topbar-countdown-notice' ); ?></p>
+						<p><strong><?php esc_html_e( 'Action on Finish:', 'topbar-countdown-notice' ); ?></strong> <?php esc_html_e( 'Hide the bar', 'topbar-countdown-notice' ); ?></p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tips Section -->
+			<div class="tcn-idea-category tcn-tips-section">
+				<h3><span class="dashicons dashicons-star-filled"></span> <?php esc_html_e( 'Pro Tips', 'topbar-countdown-notice' ); ?></h3>
+				<ul class="tcn-tips-list">
+					<li>💡 <?php esc_html_e( 'Use emojis to make your messages more eye-catching and friendly', 'topbar-countdown-notice' ); ?></li>
+					<li>🎨 <?php esc_html_e( 'Match colors with your brand or the season/event theme', 'topbar-countdown-notice' ); ?></li>
+					<li>⏰ <?php esc_html_e( 'Show seconds in countdown for last-minute urgency (last 24 hours)', 'topbar-countdown-notice' ); ?></li>
+					<li>🔄 <?php esc_html_e( 'Use alternative content to reveal special offers or discount codes', 'topbar-countdown-notice' ); ?></li>
+					<li>📱 <?php esc_html_e( 'Always test on mobile devices - keep messages short!', 'topbar-countdown-notice' ); ?></li>
+					<li>🎯 <?php esc_html_e( 'Create urgency with phrases like "Limited time", "Last chance", "Ending soon"', 'topbar-countdown-notice' ); ?></li>
+					<li>✨ <?php esc_html_e( 'Change bar colors when countdown ends to grab attention', 'topbar-countdown-notice' ); ?></li>
+				</ul>
+			</div>
+		</div>
+
+		<style>
+		.tcn-help-ideas-wrapper {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		.tcn-help-intro {
+			background: #fff;
+			padding: 20px;
+			border-left: 4px solid #2271b1;
+			margin-bottom: 30px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		}
+		.tcn-help-intro h2 {
+			margin-top: 0;
+			color: #2271b1;
+		}
+		.tcn-idea-category {
+			background: #fff;
+			padding: 25px;
+			margin-bottom: 25px;
+			border-radius: 4px;
+			box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		}
+		.tcn-idea-category h3 {
+			margin-top: 0;
+			padding-bottom: 15px;
+			border-bottom: 2px solid #f0f0f1;
+			color: #1d2327;
+			font-size: 18px;
+		}
+		.tcn-idea-category h3 .dashicons {
+			color: #2271b1;
+			vertical-align: middle;
+		}
+		.tcn-idea-card {
+			background: #f6f7f7;
+			padding: 20px;
+			margin: 15px 0;
+			border-radius: 4px;
+			border-left: 4px solid #2271b1;
+			transition: all 0.3s ease;
+		}
+		.tcn-idea-card:hover {
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+			transform: translateX(5px);
+		}
+		.tcn-idea-card h4 {
+			margin: 0 0 15px 0;
+			color: #1d2327;
+			font-size: 16px;
+		}
+		.tcn-idea-content p {
+			margin: 8px 0;
+			line-height: 1.6;
+			color: #50575e;
+		}
+		.tcn-idea-content strong {
+			color: #1d2327;
+			font-weight: 600;
+		}
+		.tcn-tips-section {
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: #fff;
+		}
+		.tcn-tips-section h3 {
+			color: #fff;
+			border-bottom-color: rgba(255,255,255,0.3);
+		}
+		.tcn-tips-section .dashicons {
+			color: #ffd700 !important;
+		}
+		.tcn-tips-list {
+			list-style: none;
+			padding: 0;
+			margin: 15px 0 0 0;
+		}
+		.tcn-tips-list li {
+			padding: 12px 15px;
+			margin: 10px 0;
+			background: rgba(255,255,255,0.1);
+			border-radius: 4px;
+			backdrop-filter: blur(10px);
+			line-height: 1.6;
+		}
+		</style>
+		<?php
+	}
+
+	/**
 	 * Render admin page
 	 */
 	public static function render_admin_page() {
@@ -719,10 +974,14 @@ class Topbar_Countdown_Notice {
 								<?php esc_html_e( 'Action on Finish', 'topbar-countdown-notice' ); ?>
 							</a>
 							<a href="#tab-appearance" class="nav-tab">
-								<span class="dashicons dashicons-art"></span> 
-								<?php esc_html_e( 'Appearance', 'topbar-countdown-notice' ); ?>
-							</a>
-						</h2>
+					<span class="dashicons dashicons-art"></span> 
+					<?php esc_html_e( 'Appearance', 'topbar-countdown-notice' ); ?>
+				</a>
+				<a href="#tab-help" class="nav-tab">
+					<span class="dashicons dashicons-lightbulb"></span> 
+					<?php esc_html_e( 'Help & Ideas', 'topbar-countdown-notice' ); ?>
+				</a>
+			</h2>
 
 						<form method="post" action="options.php" class="tcn-main-form">
 							<?php settings_fields( 'tcn_settings_group' ); ?>
@@ -754,6 +1013,11 @@ class Topbar_Countdown_Notice {
 									<?php 
 									self::render_sections_by_id( $page, array( 'tcn_appearance_section' ) );
 									?>
+								</div>
+
+								<!-- Tab: Help & Ideas -->
+								<div id="tab-help" class="tcn-tab-content" style="display:none;">
+									<?php self::render_help_ideas_tab(); ?>
 								</div>
 							</div>
 

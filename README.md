@@ -1,6 +1,6 @@
 # Topbar Countdown Notice
 
-[![WordPress Plugin Version](https://img.shields.io/badge/version-1.0.8-blue.svg)](https://github.com/antikton/topbar-countdown-notice)
+[![WordPress Plugin Version](https://img.shields.io/badge/version-1.0.9-blue.svg)](https://github.com/antikton/topbar-countdown-notice)
 [![WordPress](https://img.shields.io/badge/wordpress-5.0%2B-blue.svg)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/php-7.4%2B-purple.svg)](https://php.net/)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -340,6 +340,48 @@ This plugin follows:
 - Security best practices (sanitization, escaping, nonce verification)
 
 ## 📝 Changelog
+
+### Version 1.0.9 (2024-12-07)
+
+**Added:**
+- New "Help & Ideas" tab in plugin settings with practical configuration examples
+- 12 seasonal campaign examples:
+  - Christmas Sale (December)
+  - New Year Countdown (December 31st)
+  - Valentine's Day (February 14th)
+  - Black Friday (November)
+  - Spring Sale (March-April)
+  - Summer Sale (July-August)
+- Product launch and event examples:
+  - Product Launch Countdown with coupon reveal
+  - Webinar/Event Registration
+  - Coupon Reveal strategy
+- Informational examples:
+  - Maintenance Notice
+  - Important Announcements
+  - Course Enrollment Deadlines
+- 7 professional tips section for creating effective countdown bars
+- Beautiful gradient design for tips section
+- Interactive hover effects on example cards
+
+**Improved:**
+- Enhanced user experience with visual, categorized examples
+- Added color suggestions with hex codes for each example
+- Included emoji usage examples for better engagement
+- Better onboarding for new users with ready-to-use templates
+
+**Translations - ALL 9 Languages Updated:**
+- Spanish (es_ES) - Complete translation of all 60+ new strings
+- French (fr_FR) - Complete translation of all 60+ new strings
+- German (de_DE) - Complete translation of all 60+ new strings
+- Italian (it_IT) - Complete translation of all 60+ new strings
+- Brazilian Portuguese (pt_BR) - Complete translation of all 60+ new strings
+- Dutch (nl_NL) - Complete translation of all 60+ new strings
+- Russian (ru_RU) - Complete translation with Cyrillic alphabet (60+ strings)
+- Japanese (ja) - Complete translation with Japanese characters (60+ strings)
+- Polish (pl_PL) - Complete translation with Polish plural forms (60+ strings)
+- **Total:** 540+ new translation strings added across all languages
+- **Coverage:** Help & Ideas tab now fully localized in 10 languages
 
 ### Version 1.0.8 (2024-12-07)
 

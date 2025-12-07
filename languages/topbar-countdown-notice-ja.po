@@ -346,3 +346,225 @@ msgstr "終了日時に達したとき"
 #: topbar-countdown-notice.php:591
 msgid "You can use HTML tags like <strong>, <em>, <span>, etc."
 msgstr "<strong>、<em>、<span>などのHTMLタグを使用できます。"
+
+msgid "Help & Ideas"
+msgstr "ヘルプとアイデア"
+
+msgid "Configuration Ideas & Examples"
+msgstr "設定のアイデアと例"
+
+msgid "Get inspired with these practical examples for different seasons and use cases. These are just ideas - customize them to fit your needs!"
+msgstr "さまざまな季節や使用例の実用的な例からインスピレーションを得てください。これらは単なるアイデアです - ニーズに合わせてカスタマイズしてください！"
+
+msgid "Seasonal Campaigns"
+msgstr "季節のキャンペーン"
+
+msgid "Christmas Sale (December)"
+msgstr "クリスマスセール（12月）"
+
+msgid "Christmas Sale! Up to 50% OFF on all products"
+msgstr "クリスマスセール！全商品最大50%オフ"
+
+msgid "December 1st, 00:00"
+msgstr "12月1日、00:00"
+
+msgid "December 25th, 23:59"
+msgstr "12月25日、23:59"
+
+msgid "Active, targeting End Date"
+msgstr "アクティブ、終了日をターゲット"
+
+msgid "Red background (#c41e3a), White text"
+msgstr "赤い背景（#c41e3a）、白いテキスト"
+
+msgid "New Year Countdown (December 31st)"
+msgstr "新年カウントダウン（12月31日）"
+
+msgid "New Year is coming!"
+msgstr "新年が来ます！"
+
+msgid "December 31st, 00:00"
+msgstr "12月31日、00:00"
+
+msgid "January 1st, 00:00"
+msgstr "1月1日、00:00"
+
+msgid "Active, show seconds"
+msgstr "アクティブ、秒を表示"
+
+msgid "Alternative Content:"
+msgstr "代替コンテンツ："
+
+msgid "Happy New Year! 20% OFF with code: NEWYEAR"
+msgstr "明けましておめでとうございます！コードNEWYEARで20%オフ"
+
+msgid "Gold background (#ffd700), Black text"
+msgstr "金色の背景（#ffd700）、黒いテキスト"
+
+msgid "Valentine's Day (February 14th)"
+msgstr "バレンタインデー（2月14日）"
+
+msgid "Valentine's Day Special - Perfect gifts for your loved ones"
+msgstr "バレンタインデースペシャル - 大切な人への完璧なギフト"
+
+msgid "February 7th, 00:00"
+msgstr "2月7日、00:00"
+
+msgid "February 14th, 23:59"
+msgstr "2月14日、23:59"
+
+msgid "Pink background (#ff69b4), White text"
+msgstr "ピンクの背景（#ff69b4）、白いテキスト"
+
+msgid "Black Friday (November)"
+msgstr "ブラックフライデー（11月）"
+
+msgid "BLACK FRIDAY - Up to 70% OFF!"
+msgstr "ブラックフライデー - 最大70%オフ！"
+
+msgid "Last Friday of November, 00:00"
+msgstr "11月最後の金曜日、00:00"
+
+msgid "Sunday after Black Friday, 23:59"
+msgstr "ブラックフライデー後の日曜日、23:59"
+
+msgid "Black background (#000000), Yellow text (#ffeb3b)"
+msgstr "黒い背景（#000000）、黄色いテキスト（#ffeb3b）"
+
+msgid "Spring Sale (March-April)"
+msgstr "春のセール（3月〜4月）"
+
+msgid "Spring Collection - Fresh arrivals now available!"
+msgstr "春のコレクション - 新商品が入荷しました！"
+
+msgid "March 20th, 00:00"
+msgstr "3月20日、00:00"
+
+msgid "April 30th, 23:59"
+msgstr "4月30日、23:59"
+
+msgid "Light green background (#90ee90), Dark green text (#006400)"
+msgstr "明るい緑の背景（#90ee90）、濃い緑のテキスト（#006400）"
+
+msgid "Summer Sale (July-August)"
+msgstr "夏のセール（7月〜8月）"
+
+msgid "Summer Sale - Beat the heat with hot deals!"
+msgstr "夏のセール - 熱いお得情報で暑さを吹き飛ばそう！"
+
+msgid "July 1st, 00:00"
+msgstr "7月1日、00:00"
+
+msgid "August 31st, 23:59"
+msgstr "8月31日、23:59"
+
+msgid "Orange background (#ff8c00), White text"
+msgstr "オレンジの背景（#ff8c00）、白いテキスト"
+
+msgid "Product Launches & Events"
+msgstr "製品発売とイベント"
+
+msgid "Product Launch Countdown"
+msgstr "製品発売カウントダウン"
+
+msgid "New product launching soon!"
+msgstr "新製品がまもなく発売されます！"
+
+msgid "Active, targeting launch date"
+msgstr "アクティブ、発売日をターゲット"
+
+msgid "NOW AVAILABLE! Get 20% OFF with code: LAUNCH20"
+msgstr "販売開始！コードLAUNCH20で20%オフ"
+
+msgid "Alternative Colors:"
+msgstr "代替カラー："
+
+msgid "Green background to indicate \"live\""
+msgstr "「ライブ」を示す緑の背景"
+
+msgid "Webinar/Event Registration"
+msgstr "ウェビナー/イベント登録"
+
+msgid "Free Webinar: Marketing Strategies 2024"
+msgstr "無料ウェビナー：マーケティング戦略2024"
+
+msgid "Active, targeting event start"
+msgstr "アクティブ、イベント開始をターゲット"
+
+msgid "Show alternative: \"Event is LIVE! Join now\""
+msgstr "代替を表示：「イベントがライブ中！今すぐ参加」"
+
+msgid "Coupon Reveal"
+msgstr "クーポン公開"
+
+msgid "Secret discount code reveals in..."
+msgstr "秘密の割引コードが公開されるまで..."
+
+msgid "Use code SAVE30 for 30% OFF!"
+msgstr "コードSAVE30で30%オフ！"
+
+msgid "Bright color to grab attention"
+msgstr "注目を集める明るい色"
+
+msgid "Informational & Announcements"
+msgstr "お知らせとアナウンス"
+
+msgid "Maintenance Notice"
+msgstr "メンテナンス通知"
+
+msgid "Scheduled maintenance tonight 10 PM - 2 AM"
+msgstr "本日夜10時〜午前2時にメンテナンス予定"
+
+msgid "Day before maintenance, 08:00"
+msgstr "メンテナンス前日、08:00"
+
+msgid "Maintenance end time"
+msgstr "メンテナンス終了時刻"
+
+msgid "Orange background (#ff9800), Black text"
+msgstr "オレンジの背景（#ff9800）、黒いテキスト"
+
+msgid "Important Announcement"
+msgstr "重要なお知らせ"
+
+msgid "New shipping policy - Free shipping on orders over $50"
+msgstr "新しい配送ポリシー - $50以上のご注文で送料無料"
+
+msgid "Empty (always show)"
+msgstr "空（常に表示）"
+
+msgid "Empty (permanent)"
+msgstr "空（永続的）"
+
+msgid "Course Enrollment Deadline"
+msgstr "コース登録締切"
+
+msgid "Last chance to enroll! Course starts soon"
+msgstr "登録のラストチャンス！コースがまもなく開始されます"
+
+msgid "Active, targeting enrollment deadline"
+msgstr "アクティブ、登録締切をターゲット"
+
+msgid "Pro Tips"
+msgstr "プロのヒント"
+
+msgid "Use emojis to make your messages more eye-catching and friendly"
+msgstr "絵文字を使用してメッセージをより目を引くものにし、フレンドリーにしましょう"
+
+msgid "Match colors with your brand or the season/event theme"
+msgstr "ブランドや季節/イベントのテーマに合わせて色を調整しましょう"
+
+msgid "Show seconds in countdown for last-minute urgency (last 24 hours)"
+msgstr "最後の緊急性のためにカウントダウンに秒を表示しましょう（最後の24時間）"
+
+msgid "Use alternative content to reveal special offers or discount codes"
+msgstr "代替コンテンツを使用して特別オファーや割引コードを公開しましょう"
+
+msgid "Always test on mobile devices - keep messages short!"
+msgstr "常にモバイルデバイスでテストしましょう - メッセージは短く保ちましょう！"
+
+msgid "Create urgency with phrases like \"Limited time\", \"Last chance\", \"Ending soon\""
+msgstr "「期間限定」、「ラストチャンス」、「まもなく終了」などのフレーズで緊急性を作りましょう"
+
+msgid "Change bar colors when countdown ends to grab attention"
+msgstr "カウントダウンが終了したときにバーの色を変更して注目を集めましょう"
