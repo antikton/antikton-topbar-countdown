@@ -1,13 +1,13 @@
-# Topbar Countdown Notice
+# Antikton Topbar Countdown
 
-[![WordPress Plugin Version](https://img.shields.io/badge/version-1.0.9-blue.svg)](https://github.com/antikton/topbar-countdown-notice)
+[![WordPress Plugin Version](https://img.shields.io/badge/version-1.0.9-blue.svg)](https://github.com/antikton/antikton-topbar-countdown)
 [![WordPress](https://img.shields.io/badge/wordpress-5.0%2B-blue.svg)](https://wordpress.org/)
 [![PHP](https://img.shields.io/badge/php-7.4%2B-purple.svg)](https://php.net/)
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-green.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 
 A fully functional WordPress plugin that displays a customizable top bar with optional countdown timer and advanced scheduling capabilities.
 
-![Topbar Countdown Notice Banner](assets/banner-1200x300.png)
+![Antikton Topbar Countdown Banner](assets/banner-1200x300.png)
 
 ## 📋 Table of Contents
 
@@ -51,20 +51,20 @@ A fully functional WordPress plugin that displays a customizable top bar with op
 
 1. Log in to your WordPress admin panel
 2. Navigate to **Plugins > Add New**
-3. Search for "Topbar Countdown Notice"
+3. Search for "Antikton Topbar Countdown"
 4. Click **Install Now** and then **Activate**
 
 ### Manual Installation
 
-1. Download the latest release from [GitHub](https://github.com/antikton/topbar-countdown-notice/releases)
-2. Upload the `topbar-countdown-notice` folder to `/wp-content/plugins/`
+1. Download the latest release from [GitHub](https://github.com/antikton/antikton-topbar-countdown/releases)
+2. Upload the `antikton-topbar-countdown` folder to `/wp-content/plugins/`
 3. Activate the plugin through the **Plugins** menu in WordPress
 4. Go to **Settings > Topbar Countdown** to configure
 
 ### Via Composer
 
 ```bash
-composer require antikton/topbar-countdown-notice
+composer require antikton/antikton-topbar-countdown
 ```
 
 ## 🚀 Usage
@@ -268,7 +268,7 @@ The plugin uses JavaScript for countdown functionality, which works with most ca
 
 ### Can I translate the plugin?
 
-**Yes!** The plugin is fully translation-ready with the text domain `topbar-countdown-notice`. You can use tools like Loco Translate or create your own `.po` and `.mo` files.
+**Yes!** The plugin is fully translation-ready with the text domain `antikton-topbar-countdown`. You can use tools like Loco Translate or create your own `.po` and `.mo` files.
 
 ### How do I remove the bar temporarily?
 
@@ -289,7 +289,7 @@ Currently, the plugin displays a single global bar across all pages. Page-specif
 ### File Structure
 
 ```
-topbar-countdown-notice/
+antikton-topbar-countdown/
 ├── assets/
 │   ├── css/
 │   │   ├── admin.css          # Admin panel styles
@@ -298,9 +298,9 @@ topbar-countdown-notice/
 │       ├── admin.js           # Admin panel functionality
 │       └── frontend.js        # Frontend countdown logic
 ├── languages/                 # Translation files
-│   ├── topbar-countdown-notice.pot
+│   ├── antikton-topbar-countdown.pot
 │   └── ...
-├── topbar-countdown-notice.php # Main plugin file
+├── antikton-topbar-countdown.php # Main plugin file
 ├── uninstall.php              # Cleanup on uninstall
 ├── readme.txt                 # WordPress.org readme
 └── README.md                  # This file
@@ -323,13 +323,13 @@ add_filter('topbar_countdown_notice_locale', function($locale) {
 
 ```bash
 # Clone the repository
-git clone https://github.com/antikton/topbar-countdown-notice.git
+git clone https://github.com/antikton/antikton-topbar-countdown.git
 
 # Navigate to the plugin directory
-cd topbar-countdown-notice
+cd antikton-topbar-countdown
 
 # Install in WordPress plugins directory
-cp -r . /path/to/wordpress/wp-content/plugins/topbar-countdown-notice/
+cp -r . /path/to/wordpress/wp-content/plugins/antikton-topbar-countdown/
 ```
 
 ### Coding Standards
@@ -492,7 +492,7 @@ Contributions are welcome! Here's how you can help:
 
 ### Reporting Bugs
 
-Found a bug? Please [open an issue](https://github.com/antikton/topbar-countdown-notice/issues) with:
+Found a bug? Please [open an issue](https://github.com/antikton/antikton-topbar-countdown/issues) with:
 - WordPress version
 - PHP version
 - Plugin version
@@ -504,16 +504,16 @@ Found a bug? Please [open an issue](https://github.com/antikton/topbar-countdown
 
 Need help? Here are your options:
 
-- **Documentation**: Read this README and the [WordPress.org plugin page](https://wordpress.org/plugins/topbar-countdown-notice/)
-- **Support Forum**: [WordPress.org Support](https://wordpress.org/support/plugin/topbar-countdown-notice/)
-- **GitHub Issues**: [Report bugs or request features](https://github.com/antikton/topbar-countdown-notice/issues)
+- **Documentation**: Read this README and the [WordPress.org plugin page](https://wordpress.org/plugins/antikton-topbar-countdown/)
+- **Support Forum**: [WordPress.org Support](https://wordpress.org/support/plugin/antikton-topbar-countdown/)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/antikton/antikton-topbar-countdown/issues)
 
 ## 📄 License
 
 This plugin is licensed under the [GNU General Public License v2.0 or later](https://www.gnu.org/licenses/gpl-2.0.html).
 
 ```
-Topbar Countdown Notice - WordPress Plugin
+Antikton Topbar Countdown - WordPress Plugin
 Copyright (C) 2024 Eduardo Pagán
 
 This program is free software; you can redistribute it and/or modify
@@ -532,7 +532,7 @@ GNU General Public License for more details.
 **Eduardo Pagán** ([@antikton](https://github.com/antikton))
 
 - GitHub: [https://github.com/antikton](https://github.com/antikton)
-- Plugin URI: [https://github.com/antikton/topbar-countdown-notice](https://github.com/antikton/topbar-countdown-notice)
+- Plugin URI: [https://github.com/antikton/antikton-topbar-countdown](https://github.com/antikton/antikton-topbar-countdown)
 
 ---
 
@@ -541,5 +541,5 @@ GNU General Public License for more details.
 If you find this plugin useful, please consider:
 - ⭐ Starring the repository
 - 📢 Sharing with others
-- 💬 Leaving a review on [WordPress.org](https://wordpress.org/plugins/topbar-countdown-notice/)
+- 💬 Leaving a review on [WordPress.org](https://wordpress.org/plugins/antikton-topbar-countdown/)
 - ☕ [Buying me a coffee](https://www.buymeacoffee.com/antikton) (optional)

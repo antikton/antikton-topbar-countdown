@@ -1,9 +1,9 @@
-=== Topbar Countdown Notice ===
+=== Antikton Topbar Countdown ===
 Contributors: antikton
 Tags: topbar, countdown, notice, notification, schedule
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ A fully functional WordPress plugin that displays a customizable top bar with op
 
 == Description ==
 
-Topbar Countdown Notice is a lightweight yet powerful plugin that allows you to display a customizable top bar on your WordPress site. It features an integrated countdown timer and advanced scheduling options, making it perfect for announcements, sales, maintenance notices, and more.
+Antikton Topbar Countdown is a lightweight yet powerful plugin that allows you to display a customizable top bar on your WordPress site. It features an integrated countdown timer and advanced scheduling options, making it perfect for announcements, sales, maintenance notices, and more.
 
 **Core Features**
 
@@ -32,7 +32,7 @@ When the countdown or scheduled time ends, you have full control:
 
 == Installation ==
 
-1.  Upload the `topbar-countdown-notice` folder to the `/wp-content/plugins/` directory.
+1.  Upload the `antikton-topbar-countdown` folder to the `/wp-content/plugins/` directory.
 2.  Activate the plugin through the 'Plugins' menu in WordPress.
 3.  Go to **Settings > Topbar Countdown** to configure the plugin.
 
@@ -60,6 +60,18 @@ Absolutely! This is a popular use case. Set up a countdown to build anticipation
 6. Appearance settings panel - customize colors, padding, and styling
 
 == Changelog ==
+
+= 1.0.10 =
+*   Changed: Plugin renamed to "Antikton Topbar Countdown" for better distinction and WordPress.org compliance
+*   Changed: Plugin slug updated from "topbar-countdown-notice" to "antikton-topbar-countdown"
+*   Changed: Text domain updated to "antikton-topbar-countdown" across all files
+*   Changed: Main plugin file renamed to "antikton-topbar-countdown.php"
+*   Changed: All language files renamed to match new text domain (19 files: 9 .po + 9 .mo + 1 .pot)
+*   Improved: Inline styles and scripts now properly enqueued using wp_add_inline_style() and wp_add_inline_script()
+*   Improved: WordPress.org directory assets moved to separate folder for SVN upload
+*   Improved: Full WordPress coding standards compliance for plugin review
+*   Updated: Composer autoload configuration to reference new main file
+*   Updated: All documentation files (README.md, composer.json) with new plugin name
 
 = 1.0.9 =
 *   Added: New "Help & Ideas" tab in settings with practical configuration examples
@@ -138,6 +150,9 @@ Absolutely! This is a popular use case. Set up a countdown to build anticipation
 *   Full customization options.
 
 == Upgrade Notice ==
+
+= 1.0.10 =
+IMPORTANT: Plugin renamed to "Antikton Topbar Countdown" for WordPress.org compliance. Slug changed to "antikton-topbar-countdown". All functionality preserved. Update recommended for continued WordPress.org support.
 
 = 1.0.9 =
 Major update! New "Help & Ideas" tab with 12+ practical examples for seasonal campaigns, product launches, and events. ALL 9 language files updated with 540+ new translation strings. Complete internationalization for Help & Ideas feature.

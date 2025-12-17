@@ -1,139 +1,139 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Topbar Countdown Notice\n"
+"Project-Id-Version: Antikton Topbar Countdown\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-06 16:03+0000\n"
-"PO-Revision-Date: 2025-12-07 12:47+0100\n"
+"PO-Revision-Date: 2025-12-07 12:40+0100\n"
 "Last-Translator: \n"
-"Language-Team: Nederlands\n"
-"Language: nl_NL\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language-Team: Português do Brasil\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.8.0; wp-6.9; php-7.4.33\n"
-"X-Domain: topbar-countdown-notice"
+"X-Domain: antikton-topbar-countdown"
 
 #: topbar-countdown-notice.php:651
 msgid "Action button/link"
-msgstr "Actieknop/link"
+msgstr "Botão/link de ação"
 
 #: topbar-countdown-notice.php:167 topbar-countdown-notice.php:723
 msgid "Action on Finish"
-msgstr "Actie bij Voltooiing"
+msgstr "Ação ao Finalizar"
 
 #: topbar-countdown-notice.php:129
 msgid "Activate Bar"
-msgstr "Balk Activeren"
+msgstr "Ativar Barra"
 
 #: topbar-countdown-notice.php:289
 msgid "Activate Countdown"
-msgstr "Aftelling Activeren"
+msgstr "Ativar Contagem Regressiva"
 
 #: topbar-countdown-notice.php:644
 msgid "Add custom CSS to style the top bar. Available classes:"
-msgstr "Voeg aangepaste CSS toe om de bovenbalk te stylen. Beschikbare klassen:"
+msgstr "Adicione CSS personalizado para estilizar a barra superior. Classes disponíveis:"
 
 #: topbar-countdown-notice.php:223
 msgid "Alternative Background Color"
-msgstr "Alternatieve Achtergrondkleur"
+msgstr "Cor de Fundo Alternativa"
 
 #: topbar-countdown-notice.php:214
 msgid "Alternative Colors"
-msgstr "Alternatieve Kleuren"
+msgstr "Cores Alternativas"
 
 #: topbar-countdown-notice.php:194
 msgid "Alternative Link"
-msgstr "Alternatieve Link"
+msgstr "Link Alternativo"
 
 #: topbar-countdown-notice.php:204
 msgid "Alternative Link Button Text"
-msgstr "Alternatieve Link Knoptekst"
+msgstr "Texto do Botão de Link Alternativo"
 
 #: topbar-countdown-notice.php:184
 msgid "Alternative Text"
-msgstr "Alternatieve Tekst"
+msgstr "Texto Alternativo"
 
 #: topbar-countdown-notice.php:233
 msgid "Alternative Text Color"
-msgstr "Alternatieve Tekstkleur"
+msgstr "Cor do Texto Alternativa"
 
 #: topbar-countdown-notice.php:779
 msgid "Always test on smaller screens."
-msgstr "Test altijd op kleinere schermen."
+msgstr "Sempre teste em telas menores."
 
 #: topbar-countdown-notice.php:338 topbar-countdown-notice.php:727
 msgid "Appearance"
-msgstr "Weergave"
+msgstr "Aparência"
 
 #: topbar-countdown-notice.php:346
 msgid "Background Color"
-msgstr "Achtergrondkleur"
+msgstr "Cor de Fundo"
 
 #: topbar-countdown-notice.php:243
 msgid "Bar Content"
-msgstr "Balkinhoud"
+msgstr "Conteúdo da Barra"
 
 #: topbar-countdown-notice.php:781
 msgid "Clarity:"
-msgstr "Duidelijkheid:"
+msgstr "Clareza:"
 
 #: topbar-countdown-notice.php:427
 msgid ""
 "Configure when the bar should be visible. Leave both empty to always show "
 "the bar."
 msgstr ""
-"Configureer wanneer de balk zichtbaar moet zijn. Laat beide leeg om de balk "
-"altijd te tonen."
+"Configure quando a barra deve estar visível. Deixe ambos vazios para sempre "
+"mostrar a barra."
 
 #: topbar-countdown-notice.php:719
 msgid "Content & Countdown"
-msgstr "Inhoud & Aftelling"
+msgstr "Conteúdo e Contagem Regressiva"
 
 #: topbar-countdown-notice.php:780
 msgid "Contrast:"
-msgstr "Contrast:"
+msgstr "Contraste:"
 
 #: topbar-countdown-notice.php:648
 msgid "Countdown container"
-msgstr "Aftelcontainer"
+msgstr "Container da contagem regressiva"
 
 #: topbar-countdown-notice.php:318
 msgid "Countdown Prefix Text"
-msgstr "Aftelling Voorvoegseltekst"
+msgstr "Texto Prefixo da Contagem Regressiva"
 
 #: topbar-countdown-notice.php:649
 msgid "Countdown prefix text"
-msgstr "Aftelling voorvoegseltekst"
+msgstr "Texto prefixo da contagem regressiva"
 
 #: topbar-countdown-notice.php:299
 msgid "Countdown Target"
-msgstr "Aftelling Doel"
+msgstr "Alvo da Contagem Regressiva"
 
 #: topbar-countdown-notice.php:281
 msgid "Countdown Timer"
-msgstr "Aftelklok"
+msgstr "Temporizador de Contagem Regressiva"
 
 #: topbar-countdown-notice.php:650
 msgid "Countdown timer"
-msgstr "Aftelklok"
+msgstr "Temporizador de contagem regressiva"
 
 #: topbar-countdown-notice.php:629
 msgid "Custom colors"
-msgstr "Aangepaste kleuren"
+msgstr "Cores personalizadas"
 
 #: topbar-countdown-notice.php:406
 msgid "Custom CSS"
-msgstr "Aangepaste CSS"
+msgstr "CSS Personalizado"
 
 #: topbar-countdown-notice.php:609
 msgid "Custom Date/Time"
-msgstr "Aangepaste Datum/Tijd"
+msgstr "Data/Hora Personalizada"
 
 #: topbar-countdown-notice.php:308
 msgid "Custom Target Date/Time"
-msgstr "Aangepaste Doeldatum/Tijd"
+msgstr "Data/Hora Alvo Personalizada"
 
 #: topbar-countdown-notice.php:1356
 msgid "d"
@@ -141,19 +141,19 @@ msgstr "d"
 
 #: topbar-countdown-notice.php:415
 msgid "Debug Mode"
-msgstr "Debugmodus"
+msgstr "Modo de Depuração"
 
 #. Description of the plugin
 msgid ""
 "Display a customizable top bar with optional countdown timer and scheduling "
 "capabilities."
 msgstr ""
-"Toon een aanpasbare bovenbalk met optionele aftelklok en "
-"planningsfunctionaliteit."
+"Exiba uma barra superior personalizável com temporizador de contagem "
+"regressiva opcional e recursos de agendamento."
 
 #: topbar-countdown-notice.php:332
 msgid "Display seconds in countdown"
-msgstr "Toon seconden in aftelling"
+msgstr "Exibir segundos na contagem regressiva"
 
 #. Author of the plugin
 msgid "Eduardo Pagán"
@@ -161,31 +161,31 @@ msgstr "Eduardo Pagán"
 
 #: topbar-countdown-notice.php:157
 msgid "End Date/Time"
-msgstr "Einddatum/Tijd"
+msgstr "Data/Hora de Término"
 
 #: topbar-countdown-notice.php:780
 msgid "Ensure text is readable."
-msgstr "Zorg ervoor dat de tekst leesbaar is."
+msgstr "Certifique-se de que o texto seja legível."
 
 #: topbar-countdown-notice.php:715
 msgid "General & Schedule"
-msgstr "Algemeen & Planning"
+msgstr "Geral e Agendamento"
 
 #: topbar-countdown-notice.php:121
 msgid "General Settings"
-msgstr "Algemene Instellingen"
+msgstr "Configurações Gerais"
 
 #: topbar-countdown-notice.php:802
 msgid "Get Support"
-msgstr "Ondersteuning Krijgen"
+msgstr "Obter Suporte"
 
 #: topbar-countdown-notice.php:1357
 msgid "h"
-msgstr "u"
+msgstr "h"
 
 #: topbar-countdown-notice.php:481
 msgid "Hide the bar"
-msgstr "Verberg de balk"
+msgstr "Ocultar a barra"
 
 #. Author URI of the plugin
 msgid "https://github.com/antikton"
@@ -197,18 +197,18 @@ msgstr "https://github.com/antikton/topbar-countdown-notice"
 
 #: topbar-countdown-notice.php:646
 msgid "Inner content wrapper"
-msgstr "Binnenste inhoudswrapper"
+msgstr "Wrapper de conteúdo interno"
 
 #: topbar-countdown-notice.php:781
 msgid "Keep messages short and sweet."
-msgstr "Houd berichten kort en bondig."
+msgstr "Mantenha as mensagens curtas e diretas."
 
 #: topbar-countdown-notice.php:208 topbar-countdown-notice.php:275
 #: topbar-countdown-notice.php:1184 topbar-countdown-notice.php:1188
 #: topbar-countdown-notice.php:1365 topbar-countdown-notice.php:1427
 #: topbar-countdown-notice.php:1460
 msgid "Learn More"
-msgstr "Meer Informatie"
+msgstr "Saiba Mais"
 
 #: topbar-countdown-notice.php:1358
 msgid "m"
@@ -216,55 +216,55 @@ msgstr "m"
 
 #: topbar-countdown-notice.php:645
 msgid "Main bar container"
-msgstr "Hoofdbalkcontainer"
+msgstr "Container principal da barra"
 
 #: topbar-countdown-notice.php:251
 msgid "Main Content"
-msgstr "Hoofdinhoud"
+msgstr "Conteúdo Principal"
 
 #: topbar-countdown-notice.php:647
 msgid "Main content area"
-msgstr "Hoofdinhoudsgebied"
+msgstr "Área de conteúdo principal"
 
 #: topbar-countdown-notice.php:261
 msgid "Main Link"
-msgstr "Hoofdlink"
+msgstr "Link Principal"
 
 #: topbar-countdown-notice.php:271
 msgid "Main Link Button Text"
-msgstr "Hoofdlink Knoptekst"
+msgstr "Texto do Botão de Link Principal"
 
 #: topbar-countdown-notice.php:779
 msgid "Mobile:"
-msgstr "Mobiel:"
+msgstr "Mobile:"
 
 #: topbar-countdown-notice.php:799
 msgid "Need help or have a feature request?"
-msgstr "Hulp nodig of een functieverzoek?"
+msgstr "Precisa de ajuda ou tem uma solicitação de recurso?"
 
 #: topbar-countdown-notice.php:536
 msgid "Open in new tab"
-msgstr "Openen in nieuw tabblad"
+msgstr "Abrir em nova aba"
 
 #: topbar-countdown-notice.php:376
 msgid "Padding Bottom (px)"
-msgstr "Opvulling Onder (px)"
+msgstr "Espaçamento Inferior (px)"
 
 #: topbar-countdown-notice.php:386
 msgid "Padding Left (px)"
-msgstr "Opvulling Links (px)"
+msgstr "Espaçamento Esquerdo (px)"
 
 #: topbar-countdown-notice.php:396
 msgid "Padding Right (px)"
-msgstr "Opvulling Rechts (px)"
+msgstr "Espaçamento Direito (px)"
 
 #: topbar-countdown-notice.php:366
 msgid "Padding Top (px)"
-msgstr "Opvulling Boven (px)"
+msgstr "Espaçamento Superior (px)"
 
 #: topbar-countdown-notice.php:775
 msgid "Quick Tips"
-msgstr "Snelle Tips"
+msgstr "Dicas Rápidas"
 
 #: topbar-countdown-notice.php:1359
 msgid "s"
@@ -272,299 +272,299 @@ msgstr "s"
 
 #: topbar-countdown-notice.php:604
 msgid "Same as End Date/Time"
-msgstr "Hetzelfde als Einddatum/Tijd"
+msgstr "Igual à Data/Hora de Término"
 
 #: topbar-countdown-notice.php:624
 msgid "Same as main colors"
-msgstr "Hetzelfde als hoofdkleuren"
+msgstr "Igual às cores principais"
 
 #: topbar-countdown-notice.php:765
 msgid "Save Changes"
-msgstr "Wijzigingen Opslaan"
+msgstr "Salvar Alterações"
 
 #: topbar-countdown-notice.php:139
 msgid "Scheduling"
-msgstr "Planning"
+msgstr "Agendamento"
 
 #: topbar-countdown-notice.php:788
 msgid "Server Time"
-msgstr "Servertijd"
+msgstr "Hora do Servidor"
 
 #: topbar-countdown-notice.php:486
 msgid "Show alternative content"
-msgstr "Toon alternatieve inhoud"
+msgstr "Mostrar conteúdo alternativo"
 
 #: topbar-countdown-notice.php:419
 msgid "Show console.log messages in browser (for debugging)"
-msgstr "Toon console.log berichten in browser (voor debugging)"
+msgstr "Mostrar mensagens console.log no navegador (para depuração)"
 
 #: topbar-countdown-notice.php:293
 msgid "Show countdown timer"
-msgstr "Toon aftelklok"
+msgstr "Mostrar temporizador de contagem regressiva"
 
 #: topbar-countdown-notice.php:328
 msgid "Show Seconds"
-msgstr "Toon Seconden"
+msgstr "Mostrar Segundos"
 
 #: topbar-countdown-notice.php:133
 msgid "Show the top bar"
-msgstr "Toon de bovenbalk"
+msgstr "Mostrar a barra superior"
 
 #: topbar-countdown-notice.php:147
 msgid "Start Date/Time"
-msgstr "Startdatum/Tijd"
+msgstr "Data/Hora de Início"
 
 #: topbar-countdown-notice.php:797
 msgid "Support"
-msgstr "Ondersteuning"
+msgstr "Suporte"
 
 #: topbar-countdown-notice.php:356
 msgid "Text Color"
-msgstr "Tekstkleur"
+msgstr "Cor do Texto"
 
 #: topbar-countdown-notice.php:99
 msgid "Topbar Countdown"
-msgstr "Bovenbalk Aftelling"
+msgstr "Contagem Regressiva Superior"
 
 #. Name of the plugin
 #: topbar-countdown-notice.php:98
 msgid "Topbar Countdown Notice"
-msgstr "Bovenbalk Aftelling Melding"
+msgstr "Barra Superior com Contagem Regressiva"
 
 #: topbar-countdown-notice.php:778
 msgid "Urgency:"
-msgstr "Urgentie:"
+msgstr "Urgência:"
 
 #: topbar-countdown-notice.php:778
 msgid "Use the countdown to drive action."
-msgstr "Gebruik de aftelling om actie te stimuleren."
+msgstr "Use a contagem regressiva para impulsionar a ação."
 
 #: topbar-countdown-notice.php:175
 msgid "When End Date/Time is Reached"
-msgstr "Wanneer Einddatum/Tijd Bereikt is"
+msgstr "Quando a Data/Hora de Término for Atingida"
 
 #: topbar-countdown-notice.php:591
 msgid "You can use HTML tags like <strong>, <em>, <span>, etc."
-msgstr "Je kunt HTML-tags gebruiken zoals <strong>, <em>, <span>, enz."
+msgstr "Você pode usar tags HTML como <strong>, <em>, <span>, etc."
 
 msgid "Help & Ideas"
-msgstr "Hulp & Ideeën"
+msgstr "Ajuda e Ideias"
 
 msgid "Configuration Ideas & Examples"
-msgstr "Configuratie-ideeën & Voorbeelden"
+msgstr "Ideias de Configuração e Exemplos"
 
 msgid "Get inspired with these practical examples for different seasons and use cases. These are just ideas - customize them to fit your needs!"
-msgstr "Laat je inspireren door deze praktische voorbeelden voor verschillende seizoenen en gebruikssituaties. Dit zijn slechts ideeën - pas ze aan naar jouw behoeften!"
+msgstr "Inspire-se com estes exemplos práticos para diferentes estações e casos de uso. São apenas ideias - personalize-as para atender suas necessidades!"
 
 msgid "Seasonal Campaigns"
-msgstr "Seizoenscampagnes"
+msgstr "Campanhas Sazonais"
 
 msgid "Christmas Sale (December)"
-msgstr "Kerstuitverkoop (December)"
+msgstr "Promoção de Natal (Dezembro)"
 
 msgid "Christmas Sale! Up to 50% OFF on all products"
-msgstr "Kerstuitverkoop! Tot 50% KORTING op alle producten"
+msgstr "Promoção de Natal! Até 50% de DESCONTO em todos os produtos"
 
 msgid "December 1st, 00:00"
-msgstr "1 December, 00:00"
+msgstr "1º de Dezembro, 00:00"
 
 msgid "December 25th, 23:59"
-msgstr "25 December, 23:59"
+msgstr "25 de Dezembro, 23:59"
 
 msgid "Active, targeting End Date"
-msgstr "Actief, gericht op Einddatum"
+msgstr "Ativo, direcionando para Data de Término"
 
 msgid "Red background (#c41e3a), White text"
-msgstr "Rode achtergrond (#c41e3a), Witte tekst"
+msgstr "Fundo vermelho (#c41e3a), Texto branco"
 
 msgid "New Year Countdown (December 31st)"
-msgstr "Nieuwjaarsaftelling (31 December)"
+msgstr "Contagem Regressiva de Ano Novo (31 de Dezembro)"
 
 msgid "New Year is coming!"
-msgstr "Het nieuwe jaar komt eraan!"
+msgstr "O Ano Novo está chegando!"
 
 msgid "December 31st, 00:00"
-msgstr "31 December, 00:00"
+msgstr "31 de Dezembro, 00:00"
 
 msgid "January 1st, 00:00"
-msgstr "1 Januari, 00:00"
+msgstr "1º de Janeiro, 00:00"
 
 msgid "Active, show seconds"
-msgstr "Actief, toon seconden"
+msgstr "Ativo, mostrar segundos"
 
 msgid "Alternative Content:"
-msgstr "Alternatieve Inhoud:"
+msgstr "Conteúdo Alternativo:"
 
 msgid "Happy New Year! 20% OFF with code: NEWYEAR"
-msgstr "Gelukkig Nieuwjaar! 20% KORTING met code: NEWYEAR"
+msgstr "Feliz Ano Novo! 20% de DESCONTO com código: NEWYEAR"
 
 msgid "Gold background (#ffd700), Black text"
-msgstr "Gouden achtergrond (#ffd700), Zwarte tekst"
+msgstr "Fundo dourado (#ffd700), Texto preto"
 
 msgid "Valentine's Day (February 14th)"
-msgstr "Valentijnsdag (14 Februari)"
+msgstr "Dia dos Namorados (14 de Fevereiro)"
 
 msgid "Valentine's Day Special - Perfect gifts for your loved ones"
-msgstr "Valentijnsdag Special - Perfecte cadeaus voor je geliefden"
+msgstr "Especial Dia dos Namorados - Presentes perfeitos para seus entes queridos"
 
 msgid "February 7th, 00:00"
-msgstr "7 Februari, 00:00"
+msgstr "7 de Fevereiro, 00:00"
 
 msgid "February 14th, 23:59"
-msgstr "14 Februari, 23:59"
+msgstr "14 de Fevereiro, 23:59"
 
 msgid "Pink background (#ff69b4), White text"
-msgstr "Roze achtergrond (#ff69b4), Witte tekst"
+msgstr "Fundo rosa (#ff69b4), Texto branco"
 
 msgid "Black Friday (November)"
-msgstr "Black Friday (November)"
+msgstr "Black Friday (Novembro)"
 
 msgid "BLACK FRIDAY - Up to 70% OFF!"
-msgstr "BLACK FRIDAY - Tot 70% KORTING!"
+msgstr "BLACK FRIDAY - Até 70% de DESCONTO!"
 
 msgid "Last Friday of November, 00:00"
-msgstr "Laatste vrijdag van November, 00:00"
+msgstr "Última sexta-feira de Novembro, 00:00"
 
 msgid "Sunday after Black Friday, 23:59"
-msgstr "Zondag na Black Friday, 23:59"
+msgstr "Domingo após a Black Friday, 23:59"
 
 msgid "Black background (#000000), Yellow text (#ffeb3b)"
-msgstr "Zwarte achtergrond (#000000), Gele tekst (#ffeb3b)"
+msgstr "Fundo preto (#000000), Texto amarelo (#ffeb3b)"
 
 msgid "Spring Sale (March-April)"
-msgstr "Lente-uitverkoop (Maart-April)"
+msgstr "Promoção de Primavera (Março-Abril)"
 
 msgid "Spring Collection - Fresh arrivals now available!"
-msgstr "Lentecollectie - Nieuwe artikelen nu beschikbaar!"
+msgstr "Coleção Primavera - Novidades disponíveis agora!"
 
 msgid "March 20th, 00:00"
-msgstr "20 Maart, 00:00"
+msgstr "20 de Março, 00:00"
 
 msgid "April 30th, 23:59"
-msgstr "30 April, 23:59"
+msgstr "30 de Abril, 23:59"
 
 msgid "Light green background (#90ee90), Dark green text (#006400)"
-msgstr "Lichtgroene achtergrond (#90ee90), Donkergroene tekst (#006400)"
+msgstr "Fundo verde claro (#90ee90), Texto verde escuro (#006400)"
 
 msgid "Summer Sale (July-August)"
-msgstr "Zomeruitverkoop (Juli-Augustus)"
+msgstr "Promoção de Verão (Julho-Agosto)"
 
 msgid "Summer Sale - Beat the heat with hot deals!"
-msgstr "Zomeruitverkoop - Versla de hitte met hete deals!"
+msgstr "Promoção de Verão - Combata o calor com ofertas quentes!"
 
 msgid "July 1st, 00:00"
-msgstr "1 Juli, 00:00"
+msgstr "1º de Julho, 00:00"
 
 msgid "August 31st, 23:59"
-msgstr "31 Augustus, 23:59"
+msgstr "31 de Agosto, 23:59"
 
 msgid "Orange background (#ff8c00), White text"
-msgstr "Oranje achtergrond (#ff8c00), Witte tekst"
+msgstr "Fundo laranja (#ff8c00), Texto branco"
 
 msgid "Product Launches & Events"
-msgstr "Productlanceringen & Evenementen"
+msgstr "Lançamentos de Produtos e Eventos"
 
 msgid "Product Launch Countdown"
-msgstr "Productlancering Aftelling"
+msgstr "Contagem Regressiva de Lançamento de Produto"
 
 msgid "New product launching soon!"
-msgstr "Nieuw product komt binnenkort!"
+msgstr "Novo produto sendo lançado em breve!"
 
 msgid "Active, targeting launch date"
-msgstr "Actief, gericht op lanceringsdatum"
+msgstr "Ativo, direcionando para data de lançamento"
 
 msgid "NOW AVAILABLE! Get 20% OFF with code: LAUNCH20"
-msgstr "NU BESCHIKBAAR! Krijg 20% KORTING met code: LAUNCH20"
+msgstr "DISPONÍVEL AGORA! Ganhe 20% de DESCONTO com código: LAUNCH20"
 
 msgid "Alternative Colors:"
-msgstr "Alternatieve Kleuren:"
+msgstr "Cores Alternativas:"
 
 msgid "Green background to indicate \"live\""
-msgstr "Groene achtergrond om \"live\" aan te geven"
+msgstr "Fundo verde para indicar \"ao vivo\""
 
 msgid "Webinar/Event Registration"
-msgstr "Webinar/Evenement Registratie"
+msgstr "Registro de Webinar/Evento"
 
 msgid "Free Webinar: Marketing Strategies 2024"
-msgstr "Gratis Webinar: Marketingstrategieën 2024"
+msgstr "Webinar Gratuito: Estratégias de Marketing 2024"
 
 msgid "Active, targeting event start"
-msgstr "Actief, gericht op evenement start"
+msgstr "Ativo, direcionando para início do evento"
 
 msgid "Show alternative: \"Event is LIVE! Join now\""
-msgstr "Toon alternatief: \"Evenement is LIVE! Doe nu mee\""
+msgstr "Mostrar alternativo: \"Evento está AO VIVO! Participe agora\""
 
 msgid "Coupon Reveal"
-msgstr "Coupon Onthulling"
+msgstr "Revelação de Cupom"
 
 msgid "Secret discount code reveals in..."
-msgstr "Geheime kortingscode wordt onthuld over..."
+msgstr "Código de desconto secreto será revelado em..."
 
 msgid "Use code SAVE30 for 30% OFF!"
-msgstr "Gebruik code SAVE30 voor 30% KORTING!"
+msgstr "Use o código SAVE30 para 30% de DESCONTO!"
 
 msgid "Bright color to grab attention"
-msgstr "Felle kleur om aandacht te trekken"
+msgstr "Cor vibrante para chamar atenção"
 
 msgid "Informational & Announcements"
-msgstr "Informatief & Aankondigingen"
+msgstr "Informativos e Anúncios"
 
 msgid "Maintenance Notice"
-msgstr "Onderhoudsmelding"
+msgstr "Aviso de Manutenção"
 
 msgid "Scheduled maintenance tonight 10 PM - 2 AM"
-msgstr "Gepland onderhoud vanavond 22:00 - 02:00"
+msgstr "Manutenção programada hoje à noite 22h - 02h"
 
 msgid "Day before maintenance, 08:00"
-msgstr "Dag voor onderhoud, 08:00"
+msgstr "Dia antes da manutenção, 08:00"
 
 msgid "Maintenance end time"
-msgstr "Einde onderhoudstijd"
+msgstr "Hora de término da manutenção"
 
 msgid "Orange background (#ff9800), Black text"
-msgstr "Oranje achtergrond (#ff9800), Zwarte tekst"
+msgstr "Fundo laranja (#ff9800), Texto preto"
 
 msgid "Important Announcement"
-msgstr "Belangrijke Aankondiging"
+msgstr "Anúncio Importante"
 
 msgid "New shipping policy - Free shipping on orders over $50"
-msgstr "Nieuw verzendbeleid - Gratis verzending bij bestellingen boven $50"
+msgstr "Nova política de envio - Frete grátis em pedidos acima de $50"
 
 msgid "Empty (always show)"
-msgstr "Leeg (altijd tonen)"
+msgstr "Vazio (sempre mostrar)"
 
 msgid "Empty (permanent)"
-msgstr "Leeg (permanent)"
+msgstr "Vazio (permanente)"
 
 msgid "Course Enrollment Deadline"
-msgstr "Cursusinschrijving Deadline"
+msgstr "Prazo de Inscrição no Curso"
 
 msgid "Last chance to enroll! Course starts soon"
-msgstr "Laatste kans om in te schrijven! Cursus begint binnenkort"
+msgstr "Última chance de se inscrever! O curso começa em breve"
 
 msgid "Active, targeting enrollment deadline"
-msgstr "Actief, gericht op inschrijvingsdeadline"
+msgstr "Ativo, direcionando para prazo de inscrição"
 
 msgid "Pro Tips"
-msgstr "Pro Tips"
+msgstr "Dicas Profissionais"
 
 msgid "Use emojis to make your messages more eye-catching and friendly"
-msgstr "Gebruik emoji's om je berichten opvallender en vriendelijker te maken"
+msgstr "Use emojis para tornar suas mensagens mais atraentes e amigáveis"
 
 msgid "Match colors with your brand or the season/event theme"
-msgstr "Stem kleuren af op je merk of het seizoen/evenement thema"
+msgstr "Combine as cores com sua marca ou o tema da estação/evento"
 
 msgid "Show seconds in countdown for last-minute urgency (last 24 hours)"
-msgstr "Toon seconden in aftelling voor last-minute urgentie (laatste 24 uur)"
+msgstr "Mostre segundos na contagem regressiva para urgência de última hora (últimas 24 horas)"
 
 msgid "Use alternative content to reveal special offers or discount codes"
-msgstr "Gebruik alternatieve inhoud om speciale aanbiedingen of kortingscodes te onthullen"
+msgstr "Use conteúdo alternativo para revelar ofertas especiais ou códigos de desconto"
 
 msgid "Always test on mobile devices - keep messages short!"
-msgstr "Test altijd op mobiele apparaten - houd berichten kort!"
+msgstr "Sempre teste em dispositivos móveis - mantenha as mensagens curtas!"
 
 msgid "Create urgency with phrases like \"Limited time\", \"Last chance\", \"Ending soon\""
-msgstr "Creëer urgentie met zinnen als \"Beperkte tijd\", \"Laatste kans\", \"Eindigt binnenkort\""
+msgstr "Crie urgência com frases como \"Tempo limitado\", \"Última chance\", \"Terminando em breve\""
 
 msgid "Change bar colors when countdown ends to grab attention"
-msgstr "Verander balkleuren wanneer aftelling eindigt om aandacht te trekken"
+msgstr "Mude as cores da barra quando a contagem regressiva terminar para chamar atenção"

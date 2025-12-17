@@ -1,159 +1,159 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Topbar Countdown Notice\n"
+"Project-Id-Version: Antikton Topbar Countdown\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-12-06 16:03+0000\n"
-"PO-Revision-Date: 2025-12-07 12:40+0100\n"
+"PO-Revision-Date: 2025-12-07 12:47+0100\n"
 "Last-Translator: \n"
-"Language-Team: Português do Brasil\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Language-Team: 日本語\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Loco-Version: 2.8.0; wp-6.9; php-7.4.33\n"
-"X-Domain: topbar-countdown-notice"
+"X-Domain: antikton-topbar-countdown"
 
 #: topbar-countdown-notice.php:651
 msgid "Action button/link"
-msgstr "Botão/link de ação"
+msgstr "アクションボタン/リンク"
 
 #: topbar-countdown-notice.php:167 topbar-countdown-notice.php:723
 msgid "Action on Finish"
-msgstr "Ação ao Finalizar"
+msgstr "終了時のアクション"
 
 #: topbar-countdown-notice.php:129
 msgid "Activate Bar"
-msgstr "Ativar Barra"
+msgstr "バーを有効化"
 
 #: topbar-countdown-notice.php:289
 msgid "Activate Countdown"
-msgstr "Ativar Contagem Regressiva"
+msgstr "カウントダウンを有効化"
 
 #: topbar-countdown-notice.php:644
 msgid "Add custom CSS to style the top bar. Available classes:"
-msgstr "Adicione CSS personalizado para estilizar a barra superior. Classes disponíveis:"
+msgstr "トップバーのスタイルにカスタムCSSを追加します。利用可能なクラス："
 
 #: topbar-countdown-notice.php:223
 msgid "Alternative Background Color"
-msgstr "Cor de Fundo Alternativa"
+msgstr "代替背景色"
 
 #: topbar-countdown-notice.php:214
 msgid "Alternative Colors"
-msgstr "Cores Alternativas"
+msgstr "代替カラー"
 
 #: topbar-countdown-notice.php:194
 msgid "Alternative Link"
-msgstr "Link Alternativo"
+msgstr "代替リンク"
 
 #: topbar-countdown-notice.php:204
 msgid "Alternative Link Button Text"
-msgstr "Texto do Botão de Link Alternativo"
+msgstr "代替リンクボタンテキスト"
 
 #: topbar-countdown-notice.php:184
 msgid "Alternative Text"
-msgstr "Texto Alternativo"
+msgstr "代替テキスト"
 
 #: topbar-countdown-notice.php:233
 msgid "Alternative Text Color"
-msgstr "Cor do Texto Alternativa"
+msgstr "代替テキスト色"
 
 #: topbar-countdown-notice.php:779
 msgid "Always test on smaller screens."
-msgstr "Sempre teste em telas menores."
+msgstr "常に小さい画面でテストしてください。"
 
 #: topbar-countdown-notice.php:338 topbar-countdown-notice.php:727
 msgid "Appearance"
-msgstr "Aparência"
+msgstr "外観"
 
 #: topbar-countdown-notice.php:346
 msgid "Background Color"
-msgstr "Cor de Fundo"
+msgstr "背景色"
 
 #: topbar-countdown-notice.php:243
 msgid "Bar Content"
-msgstr "Conteúdo da Barra"
+msgstr "バーコンテンツ"
 
 #: topbar-countdown-notice.php:781
 msgid "Clarity:"
-msgstr "Clareza:"
+msgstr "明瞭性："
 
 #: topbar-countdown-notice.php:427
 msgid ""
 "Configure when the bar should be visible. Leave both empty to always show "
 "the bar."
 msgstr ""
-"Configure quando a barra deve estar visível. Deixe ambos vazios para sempre "
-"mostrar a barra."
+"バーを表示するタイミングを設定します。両方を空にすると、常にバーが表示され"
+"ます。"
 
 #: topbar-countdown-notice.php:719
 msgid "Content & Countdown"
-msgstr "Conteúdo e Contagem Regressiva"
+msgstr "コンテンツとカウントダウン"
 
 #: topbar-countdown-notice.php:780
 msgid "Contrast:"
-msgstr "Contraste:"
+msgstr "コントラスト："
 
 #: topbar-countdown-notice.php:648
 msgid "Countdown container"
-msgstr "Container da contagem regressiva"
+msgstr "カウントダウンコンテナ"
 
 #: topbar-countdown-notice.php:318
 msgid "Countdown Prefix Text"
-msgstr "Texto Prefixo da Contagem Regressiva"
+msgstr "カウントダウンプレフィックステキスト"
 
 #: topbar-countdown-notice.php:649
 msgid "Countdown prefix text"
-msgstr "Texto prefixo da contagem regressiva"
+msgstr "カウントダウンプレフィックステキスト"
 
 #: topbar-countdown-notice.php:299
 msgid "Countdown Target"
-msgstr "Alvo da Contagem Regressiva"
+msgstr "カウントダウンターゲット"
 
 #: topbar-countdown-notice.php:281
 msgid "Countdown Timer"
-msgstr "Temporizador de Contagem Regressiva"
+msgstr "カウントダウンタイマー"
 
 #: topbar-countdown-notice.php:650
 msgid "Countdown timer"
-msgstr "Temporizador de contagem regressiva"
+msgstr "カウントダウンタイマー"
 
 #: topbar-countdown-notice.php:629
 msgid "Custom colors"
-msgstr "Cores personalizadas"
+msgstr "カスタムカラー"
 
 #: topbar-countdown-notice.php:406
 msgid "Custom CSS"
-msgstr "CSS Personalizado"
+msgstr "カスタムCSS"
 
 #: topbar-countdown-notice.php:609
 msgid "Custom Date/Time"
-msgstr "Data/Hora Personalizada"
+msgstr "カスタム日時"
 
 #: topbar-countdown-notice.php:308
 msgid "Custom Target Date/Time"
-msgstr "Data/Hora Alvo Personalizada"
+msgstr "カスタムターゲット日時"
 
 #: topbar-countdown-notice.php:1356
 msgid "d"
-msgstr "d"
+msgstr "日"
 
 #: topbar-countdown-notice.php:415
 msgid "Debug Mode"
-msgstr "Modo de Depuração"
+msgstr "デバッグモード"
 
 #. Description of the plugin
 msgid ""
 "Display a customizable top bar with optional countdown timer and scheduling "
 "capabilities."
 msgstr ""
-"Exiba uma barra superior personalizável com temporizador de contagem "
-"regressiva opcional e recursos de agendamento."
+"オプションのカウントダウンタイマーとスケジュール機能を備えたカスタマイズ可"
+"能なトップバーを表示します。"
 
 #: topbar-countdown-notice.php:332
 msgid "Display seconds in countdown"
-msgstr "Exibir segundos na contagem regressiva"
+msgstr "カウントダウンに秒を表示"
 
 #. Author of the plugin
 msgid "Eduardo Pagán"
@@ -161,31 +161,31 @@ msgstr "Eduardo Pagán"
 
 #: topbar-countdown-notice.php:157
 msgid "End Date/Time"
-msgstr "Data/Hora de Término"
+msgstr "終了日時"
 
 #: topbar-countdown-notice.php:780
 msgid "Ensure text is readable."
-msgstr "Certifique-se de que o texto seja legível."
+msgstr "テキストが読みやすいことを確認してください。"
 
 #: topbar-countdown-notice.php:715
 msgid "General & Schedule"
-msgstr "Geral e Agendamento"
+msgstr "一般とスケジュール"
 
 #: topbar-countdown-notice.php:121
 msgid "General Settings"
-msgstr "Configurações Gerais"
+msgstr "一般設定"
 
 #: topbar-countdown-notice.php:802
 msgid "Get Support"
-msgstr "Obter Suporte"
+msgstr "サポートを受ける"
 
 #: topbar-countdown-notice.php:1357
 msgid "h"
-msgstr "h"
+msgstr "時間"
 
 #: topbar-countdown-notice.php:481
 msgid "Hide the bar"
-msgstr "Ocultar a barra"
+msgstr "バーを非表示"
 
 #. Author URI of the plugin
 msgid "https://github.com/antikton"
@@ -197,374 +197,374 @@ msgstr "https://github.com/antikton/topbar-countdown-notice"
 
 #: topbar-countdown-notice.php:646
 msgid "Inner content wrapper"
-msgstr "Wrapper de conteúdo interno"
+msgstr "内部コンテンツラッパー"
 
 #: topbar-countdown-notice.php:781
 msgid "Keep messages short and sweet."
-msgstr "Mantenha as mensagens curtas e diretas."
+msgstr "メッセージは短く簡潔に保ってください。"
 
 #: topbar-countdown-notice.php:208 topbar-countdown-notice.php:275
 #: topbar-countdown-notice.php:1184 topbar-countdown-notice.php:1188
 #: topbar-countdown-notice.php:1365 topbar-countdown-notice.php:1427
 #: topbar-countdown-notice.php:1460
 msgid "Learn More"
-msgstr "Saiba Mais"
+msgstr "詳細を見る"
 
 #: topbar-countdown-notice.php:1358
 msgid "m"
-msgstr "m"
+msgstr "分"
 
 #: topbar-countdown-notice.php:645
 msgid "Main bar container"
-msgstr "Container principal da barra"
+msgstr "メインバーコンテナ"
 
 #: topbar-countdown-notice.php:251
 msgid "Main Content"
-msgstr "Conteúdo Principal"
+msgstr "メインコンテンツ"
 
 #: topbar-countdown-notice.php:647
 msgid "Main content area"
-msgstr "Área de conteúdo principal"
+msgstr "メインコンテンツエリア"
 
 #: topbar-countdown-notice.php:261
 msgid "Main Link"
-msgstr "Link Principal"
+msgstr "メインリンク"
 
 #: topbar-countdown-notice.php:271
 msgid "Main Link Button Text"
-msgstr "Texto do Botão de Link Principal"
+msgstr "メインリンクボタンテキスト"
 
 #: topbar-countdown-notice.php:779
 msgid "Mobile:"
-msgstr "Mobile:"
+msgstr "モバイル："
 
 #: topbar-countdown-notice.php:799
 msgid "Need help or have a feature request?"
-msgstr "Precisa de ajuda ou tem uma solicitação de recurso?"
+msgstr "ヘルプが必要ですか、または機能リクエストがありますか？"
 
 #: topbar-countdown-notice.php:536
 msgid "Open in new tab"
-msgstr "Abrir em nova aba"
+msgstr "新しいタブで開く"
 
 #: topbar-countdown-notice.php:376
 msgid "Padding Bottom (px)"
-msgstr "Espaçamento Inferior (px)"
+msgstr "下部パディング（px）"
 
 #: topbar-countdown-notice.php:386
 msgid "Padding Left (px)"
-msgstr "Espaçamento Esquerdo (px)"
+msgstr "左側パディング（px）"
 
 #: topbar-countdown-notice.php:396
 msgid "Padding Right (px)"
-msgstr "Espaçamento Direito (px)"
+msgstr "右側パディング（px）"
 
 #: topbar-countdown-notice.php:366
 msgid "Padding Top (px)"
-msgstr "Espaçamento Superior (px)"
+msgstr "上部パディング（px）"
 
 #: topbar-countdown-notice.php:775
 msgid "Quick Tips"
-msgstr "Dicas Rápidas"
+msgstr "クイックヒント"
 
 #: topbar-countdown-notice.php:1359
 msgid "s"
-msgstr "s"
+msgstr "秒"
 
 #: topbar-countdown-notice.php:604
 msgid "Same as End Date/Time"
-msgstr "Igual à Data/Hora de Término"
+msgstr "終了日時と同じ"
 
 #: topbar-countdown-notice.php:624
 msgid "Same as main colors"
-msgstr "Igual às cores principais"
+msgstr "メインカラーと同じ"
 
 #: topbar-countdown-notice.php:765
 msgid "Save Changes"
-msgstr "Salvar Alterações"
+msgstr "変更を保存"
 
 #: topbar-countdown-notice.php:139
 msgid "Scheduling"
-msgstr "Agendamento"
+msgstr "スケジュール設定"
 
 #: topbar-countdown-notice.php:788
 msgid "Server Time"
-msgstr "Hora do Servidor"
+msgstr "サーバー時刻"
 
 #: topbar-countdown-notice.php:486
 msgid "Show alternative content"
-msgstr "Mostrar conteúdo alternativo"
+msgstr "代替コンテンツを表示"
 
 #: topbar-countdown-notice.php:419
 msgid "Show console.log messages in browser (for debugging)"
-msgstr "Mostrar mensagens console.log no navegador (para depuração)"
+msgstr "ブラウザにconsole.logメッセージを表示（デバッグ用）"
 
 #: topbar-countdown-notice.php:293
 msgid "Show countdown timer"
-msgstr "Mostrar temporizador de contagem regressiva"
+msgstr "カウントダウンタイマーを表示"
 
 #: topbar-countdown-notice.php:328
 msgid "Show Seconds"
-msgstr "Mostrar Segundos"
+msgstr "秒を表示"
 
 #: topbar-countdown-notice.php:133
 msgid "Show the top bar"
-msgstr "Mostrar a barra superior"
+msgstr "トップバーを表示"
 
 #: topbar-countdown-notice.php:147
 msgid "Start Date/Time"
-msgstr "Data/Hora de Início"
+msgstr "開始日時"
 
 #: topbar-countdown-notice.php:797
 msgid "Support"
-msgstr "Suporte"
+msgstr "サポート"
 
 #: topbar-countdown-notice.php:356
 msgid "Text Color"
-msgstr "Cor do Texto"
+msgstr "テキスト色"
 
 #: topbar-countdown-notice.php:99
 msgid "Topbar Countdown"
-msgstr "Contagem Regressiva Superior"
+msgstr "トップバーカウントダウン"
 
 #. Name of the plugin
 #: topbar-countdown-notice.php:98
 msgid "Topbar Countdown Notice"
-msgstr "Barra Superior com Contagem Regressiva"
+msgstr "トップバーカウントダウン通知"
 
 #: topbar-countdown-notice.php:778
 msgid "Urgency:"
-msgstr "Urgência:"
+msgstr "緊急性："
 
 #: topbar-countdown-notice.php:778
 msgid "Use the countdown to drive action."
-msgstr "Use a contagem regressiva para impulsionar a ação."
+msgstr "カウントダウンを使用してアクションを促進します。"
 
 #: topbar-countdown-notice.php:175
 msgid "When End Date/Time is Reached"
-msgstr "Quando a Data/Hora de Término for Atingida"
+msgstr "終了日時に達したとき"
 
 #: topbar-countdown-notice.php:591
 msgid "You can use HTML tags like <strong>, <em>, <span>, etc."
-msgstr "Você pode usar tags HTML como <strong>, <em>, <span>, etc."
+msgstr "<strong>、<em>、<span>などのHTMLタグを使用できます。"
 
 msgid "Help & Ideas"
-msgstr "Ajuda e Ideias"
+msgstr "ヘルプとアイデア"
 
 msgid "Configuration Ideas & Examples"
-msgstr "Ideias de Configuração e Exemplos"
+msgstr "設定のアイデアと例"
 
 msgid "Get inspired with these practical examples for different seasons and use cases. These are just ideas - customize them to fit your needs!"
-msgstr "Inspire-se com estes exemplos práticos para diferentes estações e casos de uso. São apenas ideias - personalize-as para atender suas necessidades!"
+msgstr "さまざまな季節や使用例の実用的な例からインスピレーションを得てください。これらは単なるアイデアです - ニーズに合わせてカスタマイズしてください！"
 
 msgid "Seasonal Campaigns"
-msgstr "Campanhas Sazonais"
+msgstr "季節のキャンペーン"
 
 msgid "Christmas Sale (December)"
-msgstr "Promoção de Natal (Dezembro)"
+msgstr "クリスマスセール（12月）"
 
 msgid "Christmas Sale! Up to 50% OFF on all products"
-msgstr "Promoção de Natal! Até 50% de DESCONTO em todos os produtos"
+msgstr "クリスマスセール！全商品最大50%オフ"
 
 msgid "December 1st, 00:00"
-msgstr "1º de Dezembro, 00:00"
+msgstr "12月1日、00:00"
 
 msgid "December 25th, 23:59"
-msgstr "25 de Dezembro, 23:59"
+msgstr "12月25日、23:59"
 
 msgid "Active, targeting End Date"
-msgstr "Ativo, direcionando para Data de Término"
+msgstr "アクティブ、終了日をターゲット"
 
 msgid "Red background (#c41e3a), White text"
-msgstr "Fundo vermelho (#c41e3a), Texto branco"
+msgstr "赤い背景（#c41e3a）、白いテキスト"
 
 msgid "New Year Countdown (December 31st)"
-msgstr "Contagem Regressiva de Ano Novo (31 de Dezembro)"
+msgstr "新年カウントダウン（12月31日）"
 
 msgid "New Year is coming!"
-msgstr "O Ano Novo está chegando!"
+msgstr "新年が来ます！"
 
 msgid "December 31st, 00:00"
-msgstr "31 de Dezembro, 00:00"
+msgstr "12月31日、00:00"
 
 msgid "January 1st, 00:00"
-msgstr "1º de Janeiro, 00:00"
+msgstr "1月1日、00:00"
 
 msgid "Active, show seconds"
-msgstr "Ativo, mostrar segundos"
+msgstr "アクティブ、秒を表示"
 
 msgid "Alternative Content:"
-msgstr "Conteúdo Alternativo:"
+msgstr "代替コンテンツ："
 
 msgid "Happy New Year! 20% OFF with code: NEWYEAR"
-msgstr "Feliz Ano Novo! 20% de DESCONTO com código: NEWYEAR"
+msgstr "明けましておめでとうございます！コードNEWYEARで20%オフ"
 
 msgid "Gold background (#ffd700), Black text"
-msgstr "Fundo dourado (#ffd700), Texto preto"
+msgstr "金色の背景（#ffd700）、黒いテキスト"
 
 msgid "Valentine's Day (February 14th)"
-msgstr "Dia dos Namorados (14 de Fevereiro)"
+msgstr "バレンタインデー（2月14日）"
 
 msgid "Valentine's Day Special - Perfect gifts for your loved ones"
-msgstr "Especial Dia dos Namorados - Presentes perfeitos para seus entes queridos"
+msgstr "バレンタインデースペシャル - 大切な人への完璧なギフト"
 
 msgid "February 7th, 00:00"
-msgstr "7 de Fevereiro, 00:00"
+msgstr "2月7日、00:00"
 
 msgid "February 14th, 23:59"
-msgstr "14 de Fevereiro, 23:59"
+msgstr "2月14日、23:59"
 
 msgid "Pink background (#ff69b4), White text"
-msgstr "Fundo rosa (#ff69b4), Texto branco"
+msgstr "ピンクの背景（#ff69b4）、白いテキスト"
 
 msgid "Black Friday (November)"
-msgstr "Black Friday (Novembro)"
+msgstr "ブラックフライデー（11月）"
 
 msgid "BLACK FRIDAY - Up to 70% OFF!"
-msgstr "BLACK FRIDAY - Até 70% de DESCONTO!"
+msgstr "ブラックフライデー - 最大70%オフ！"
 
 msgid "Last Friday of November, 00:00"
-msgstr "Última sexta-feira de Novembro, 00:00"
+msgstr "11月最後の金曜日、00:00"
 
 msgid "Sunday after Black Friday, 23:59"
-msgstr "Domingo após a Black Friday, 23:59"
+msgstr "ブラックフライデー後の日曜日、23:59"
 
 msgid "Black background (#000000), Yellow text (#ffeb3b)"
-msgstr "Fundo preto (#000000), Texto amarelo (#ffeb3b)"
+msgstr "黒い背景（#000000）、黄色いテキスト（#ffeb3b）"
 
 msgid "Spring Sale (March-April)"
-msgstr "Promoção de Primavera (Março-Abril)"
+msgstr "春のセール（3月〜4月）"
 
 msgid "Spring Collection - Fresh arrivals now available!"
-msgstr "Coleção Primavera - Novidades disponíveis agora!"
+msgstr "春のコレクション - 新商品が入荷しました！"
 
 msgid "March 20th, 00:00"
-msgstr "20 de Março, 00:00"
+msgstr "3月20日、00:00"
 
 msgid "April 30th, 23:59"
-msgstr "30 de Abril, 23:59"
+msgstr "4月30日、23:59"
 
 msgid "Light green background (#90ee90), Dark green text (#006400)"
-msgstr "Fundo verde claro (#90ee90), Texto verde escuro (#006400)"
+msgstr "明るい緑の背景（#90ee90）、濃い緑のテキスト（#006400）"
 
 msgid "Summer Sale (July-August)"
-msgstr "Promoção de Verão (Julho-Agosto)"
+msgstr "夏のセール（7月〜8月）"
 
 msgid "Summer Sale - Beat the heat with hot deals!"
-msgstr "Promoção de Verão - Combata o calor com ofertas quentes!"
+msgstr "夏のセール - 熱いお得情報で暑さを吹き飛ばそう！"
 
 msgid "July 1st, 00:00"
-msgstr "1º de Julho, 00:00"
+msgstr "7月1日、00:00"
 
 msgid "August 31st, 23:59"
-msgstr "31 de Agosto, 23:59"
+msgstr "8月31日、23:59"
 
 msgid "Orange background (#ff8c00), White text"
-msgstr "Fundo laranja (#ff8c00), Texto branco"
+msgstr "オレンジの背景（#ff8c00）、白いテキスト"
 
 msgid "Product Launches & Events"
-msgstr "Lançamentos de Produtos e Eventos"
+msgstr "製品発売とイベント"
 
 msgid "Product Launch Countdown"
-msgstr "Contagem Regressiva de Lançamento de Produto"
+msgstr "製品発売カウントダウン"
 
 msgid "New product launching soon!"
-msgstr "Novo produto sendo lançado em breve!"
+msgstr "新製品がまもなく発売されます！"
 
 msgid "Active, targeting launch date"
-msgstr "Ativo, direcionando para data de lançamento"
+msgstr "アクティブ、発売日をターゲット"
 
 msgid "NOW AVAILABLE! Get 20% OFF with code: LAUNCH20"
-msgstr "DISPONÍVEL AGORA! Ganhe 20% de DESCONTO com código: LAUNCH20"
+msgstr "販売開始！コードLAUNCH20で20%オフ"
 
 msgid "Alternative Colors:"
-msgstr "Cores Alternativas:"
+msgstr "代替カラー："
 
 msgid "Green background to indicate \"live\""
-msgstr "Fundo verde para indicar \"ao vivo\""
+msgstr "「ライブ」を示す緑の背景"
 
 msgid "Webinar/Event Registration"
-msgstr "Registro de Webinar/Evento"
+msgstr "ウェビナー/イベント登録"
 
 msgid "Free Webinar: Marketing Strategies 2024"
-msgstr "Webinar Gratuito: Estratégias de Marketing 2024"
+msgstr "無料ウェビナー：マーケティング戦略2024"
 
 msgid "Active, targeting event start"
-msgstr "Ativo, direcionando para início do evento"
+msgstr "アクティブ、イベント開始をターゲット"
 
 msgid "Show alternative: \"Event is LIVE! Join now\""
-msgstr "Mostrar alternativo: \"Evento está AO VIVO! Participe agora\""
+msgstr "代替を表示：「イベントがライブ中！今すぐ参加」"
 
 msgid "Coupon Reveal"
-msgstr "Revelação de Cupom"
+msgstr "クーポン公開"
 
 msgid "Secret discount code reveals in..."
-msgstr "Código de desconto secreto será revelado em..."
+msgstr "秘密の割引コードが公開されるまで..."
 
 msgid "Use code SAVE30 for 30% OFF!"
-msgstr "Use o código SAVE30 para 30% de DESCONTO!"
+msgstr "コードSAVE30で30%オフ！"
 
 msgid "Bright color to grab attention"
-msgstr "Cor vibrante para chamar atenção"
+msgstr "注目を集める明るい色"
 
 msgid "Informational & Announcements"
-msgstr "Informativos e Anúncios"
+msgstr "お知らせとアナウンス"
 
 msgid "Maintenance Notice"
-msgstr "Aviso de Manutenção"
+msgstr "メンテナンス通知"
 
 msgid "Scheduled maintenance tonight 10 PM - 2 AM"
-msgstr "Manutenção programada hoje à noite 22h - 02h"
+msgstr "本日夜10時〜午前2時にメンテナンス予定"
 
 msgid "Day before maintenance, 08:00"
-msgstr "Dia antes da manutenção, 08:00"
+msgstr "メンテナンス前日、08:00"
 
 msgid "Maintenance end time"
-msgstr "Hora de término da manutenção"
+msgstr "メンテナンス終了時刻"
 
 msgid "Orange background (#ff9800), Black text"
-msgstr "Fundo laranja (#ff9800), Texto preto"
+msgstr "オレンジの背景（#ff9800）、黒いテキスト"
 
 msgid "Important Announcement"
-msgstr "Anúncio Importante"
+msgstr "重要なお知らせ"
 
 msgid "New shipping policy - Free shipping on orders over $50"
-msgstr "Nova política de envio - Frete grátis em pedidos acima de $50"
+msgstr "新しい配送ポリシー - $50以上のご注文で送料無料"
 
 msgid "Empty (always show)"
-msgstr "Vazio (sempre mostrar)"
+msgstr "空（常に表示）"
 
 msgid "Empty (permanent)"
-msgstr "Vazio (permanente)"
+msgstr "空（永続的）"
 
 msgid "Course Enrollment Deadline"
-msgstr "Prazo de Inscrição no Curso"
+msgstr "コース登録締切"
 
 msgid "Last chance to enroll! Course starts soon"
-msgstr "Última chance de se inscrever! O curso começa em breve"
+msgstr "登録のラストチャンス！コースがまもなく開始されます"
 
 msgid "Active, targeting enrollment deadline"
-msgstr "Ativo, direcionando para prazo de inscrição"
+msgstr "アクティブ、登録締切をターゲット"
 
 msgid "Pro Tips"
-msgstr "Dicas Profissionais"
+msgstr "プロのヒント"
 
 msgid "Use emojis to make your messages more eye-catching and friendly"
-msgstr "Use emojis para tornar suas mensagens mais atraentes e amigáveis"
+msgstr "絵文字を使用してメッセージをより目を引くものにし、フレンドリーにしましょう"
 
 msgid "Match colors with your brand or the season/event theme"
-msgstr "Combine as cores com sua marca ou o tema da estação/evento"
+msgstr "ブランドや季節/イベントのテーマに合わせて色を調整しましょう"
 
 msgid "Show seconds in countdown for last-minute urgency (last 24 hours)"
-msgstr "Mostre segundos na contagem regressiva para urgência de última hora (últimas 24 horas)"
+msgstr "最後の緊急性のためにカウントダウンに秒を表示しましょう（最後の24時間）"
 
 msgid "Use alternative content to reveal special offers or discount codes"
-msgstr "Use conteúdo alternativo para revelar ofertas especiais ou códigos de desconto"
+msgstr "代替コンテンツを使用して特別オファーや割引コードを公開しましょう"
 
 msgid "Always test on mobile devices - keep messages short!"
-msgstr "Sempre teste em dispositivos móveis - mantenha as mensagens curtas!"
+msgstr "常にモバイルデバイスでテストしましょう - メッセージは短く保ちましょう！"
 
 msgid "Create urgency with phrases like \"Limited time\", \"Last chance\", \"Ending soon\""
-msgstr "Crie urgência com frases como \"Tempo limitado\", \"Última chance\", \"Terminando em breve\""
+msgstr "「期間限定」、「ラストチャンス」、「まもなく終了」などのフレーズで緊急性を作りましょう"
 
 msgid "Change bar colors when countdown ends to grab attention"
-msgstr "Mude as cores da barra quando a contagem regressiva terminar para chamar atenção"
+msgstr "カウントダウンが終了したときにバーの色を変更して注目を集めましょう"
