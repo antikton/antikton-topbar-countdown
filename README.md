@@ -7,7 +7,7 @@
 
 A fully functional WordPress plugin that displays a customizable top bar with optional countdown timer and advanced scheduling capabilities.
 
-![Antikton Topbar Countdown Banner](assets/banner-1200x300.png)
+![Antikton Topbar Countdown Banner](.wordpress-org-assets/banner-1200x300.png)
 
 ## 📋 Table of Contents
 
@@ -209,29 +209,29 @@ Use these classes in your Custom CSS field:
 ### Frontend Display
 
 #### Active Countdown Bar
-![Active Countdown Bar](assets/screenshot-1.png)
+![Active Countdown Bar](.wordpress-org-assets/screenshot-1.png)
 *Example of the top bar with active countdown timer showing urgency for a limited-time offer*
 
 #### Alternative Content (After Expiration)
-![Alternative Content](assets/screenshot-2.png)
+![Alternative Content](.wordpress-org-assets/screenshot-2.png)
 *Example of alternative content displayed after the countdown expires*
 
 ### Admin Settings Panels
 
 #### 1. General & Schedule Settings
-![General Settings](assets/screenshot-3.png)
+![General Settings](.wordpress-org-assets/screenshot-3.png)
 *Configure activation status and scheduling options for when the bar should appear*
 
 #### 2. Content & Countdown Settings
-![Content Settings](assets/screenshot-4.png)
+![Content Settings](.wordpress-org-assets/screenshot-4.png)
 *Set up your main content, call-to-action buttons, and countdown timer configuration*
 
 #### 3. Action on Finish Settings
-![Finish Action Settings](assets/screenshot-5.png)
+![Finish Action Settings](.wordpress-org-assets/screenshot-5.png)
 *Define what happens when the countdown ends - hide bar or show alternative content*
 
 #### 4. Appearance Settings
-![Appearance Settings](assets/screenshot-6.png)
+![Appearance Settings](.wordpress-org-assets/screenshot-6.png)
 *Customize colors, padding, and add custom CSS for advanced styling*
 
 ## ❓ Frequently Asked Questions
@@ -340,6 +340,22 @@ This plugin follows:
 - Security best practices (sanitization, escaping, nonce verification)
 
 ## 📝 Changelog
+
+### Version 1.0.10 (2024-12-17)
+
+**Changed:**
+- Plugin renamed to "Antikton Topbar Countdown" for better distinction and WordPress.org compliance
+- Plugin slug updated from "topbar-countdown-notice" to "antikton-topbar-countdown"
+- Text domain updated to "antikton-topbar-countdown" across all files
+- Main plugin file renamed to "antikton-topbar-countdown.php"
+- All language files renamed to match new text domain (19 files: 9 .po + 9 .mo + 1 .pot)
+
+**Improved:**
+- Inline styles and scripts now properly enqueued using `wp_add_inline_style()` and `wp_add_inline_script()`
+- WordPress.org directory assets moved to `.wordpress-org-assets/` folder for SVN upload
+- Full WordPress coding standards compliance for plugin review
+- Composer autoload configuration updated to reference new main file
+- All documentation files (README.md, composer.json) updated with new plugin name
 
 ### Version 1.0.9 (2024-12-07)
 
