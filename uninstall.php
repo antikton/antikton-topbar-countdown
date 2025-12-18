@@ -12,7 +12,8 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 // Delete plugin options
-delete_option( 'tcn_settings' );
+delete_option( 'antitoco_settings' );
 
 // For multisite installations
-delete_site_option( 'tcn_settings' );
+delete_site_option( 'antitoco_settings' );
+

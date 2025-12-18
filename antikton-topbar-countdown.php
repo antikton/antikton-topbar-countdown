@@ -1,9 +1,9 @@
-<?php /** @noinspection ALL */
+<?php
 /**
  * Plugin Name: Antikton Topbar Countdown
  * Plugin URI: https://github.com/antikton/antikton-topbar-countdown
  * Description: Display a customizable top bar with optional countdown timer and scheduling capabilities.
- * Version: 1.0.10
+ * Version: 1.1.0
  * Author: Eduardo Pagán
  * Author URI: https://github.com/antikton
  * Text Domain: antikton-topbar-countdown
@@ -20,17 +20,17 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Main plugin class
  */
-class Topbar_Countdown_Notice {
+class Antikton_Topbar_Countdown {
 
 	/**
 	 * Plugin version
 	 */
-	const VERSION = '1.0.10';
+	const VERSION = '1.1.0';
 
 	/**
 	 * Option name for settings
 	 */
-	const OPTION_NAME = 'tcn_settings';
+	const OPTION_NAME = 'antitoco_settings';
 
 	/**
 	 * Text domain for translations
@@ -39,19 +39,21 @@ class Topbar_Countdown_Notice {
 
 	/**
 	 * Initialize the plugin
-     * @noinspection PhpUndefinedFunctionInspection
-     */
+	 */
 	public static function init() {
 		// Load text domain
 		add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
 		
 		// Add AJAX handler for getting server time
-		add_action( 'wp_ajax_tcn_get_server_time', array( __CLASS__, 'ajax_get_server_time' ) );
+		add_action( 'wp_ajax_antitoco_get_server_time', array( __CLASS__, 'ajax_get_server_time' ) );
 		
 		// Admin hooks
 		add_action( 'admin_menu', array( __CLASS__, 'add_admin_menu' ) );
 		add_action( 'admin_init', array( __CLASS__, 'register_settings' ) );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_admin_assets' ) );
+		
+		// Add settings link in plugins list
+		add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( __CLASS__, 'add_settings_link' ) );
 		
 		// Frontend hooks
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_frontend_assets' ) );
@@ -87,6 +89,19 @@ class Topbar_Countdown_Notice {
 
 
     /**
+	 * Add settings link to plugin actions
+	 */
+	public static function add_settings_link( $links ) {
+		$settings_link = sprintf(
+			'<a href="%s">%s</a>',
+			admin_url( 'options-general.php?page=antikton-topbar-countdown' ),
+			esc_html__( 'Ajustes', 'antikton-topbar-countdown' )
+		);
+		array_unshift( $links, $settings_link );
+		return $links;
+	}
+
+    /**
 	 * Add admin menu page
 	 */
 	public static function add_admin_menu() {
@@ -104,7 +119,7 @@ class Topbar_Countdown_Notice {
 	 */
 	public static function register_settings() {
 		register_setting(
-			'tcn_settings_group',
+			'antitoco_settings_group',
 			self::OPTION_NAME,
 			array(
 				'sanitize_callback' => array( __CLASS__, 'sanitize_settings' ),
@@ -113,7 +128,7 @@ class Topbar_Countdown_Notice {
 
 		// Main section
 		add_settings_section(
-			'tcn_main_section',
+			'antitoco_main_section',
 			__( 'General Settings', 'antikton-topbar-countdown' ),
 			null,
 			'antikton-topbar-countdown'
@@ -125,13 +140,13 @@ class Topbar_Countdown_Notice {
 			__( 'Activate Bar', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_checkbox_field' ),
 			'antikton-topbar-countdown',
-			'tcn_main_section',
+			'antitoco_main_section',
 			array( 'field' => 'active', 'label' => __( 'Show the top bar', 'antikton-topbar-countdown' ) )
 		);
 
 		// Scheduling section
 		add_settings_section(
-			'tcn_schedule_section',
+			'antitoco_schedule_section',
 			__( 'Scheduling', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_schedule_section_description' ),
 			'antikton-topbar-countdown'
@@ -143,7 +158,7 @@ class Topbar_Countdown_Notice {
 			__( 'Start Date/Time', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_datetime_field' ),
 			'antikton-topbar-countdown',
-			'tcn_schedule_section',
+			'antitoco_schedule_section',
 			array( 'field' => 'start_datetime' )
 		);
 
@@ -153,13 +168,13 @@ class Topbar_Countdown_Notice {
 			__( 'End Date/Time', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_datetime_field' ),
 			'antikton-topbar-countdown',
-			'tcn_schedule_section',
+			'antitoco_schedule_section',
 			array( 'field' => 'end_datetime' )
 		);
 
 		// Finish action section
 		add_settings_section(
-			'tcn_finish_section',
+			'antitoco_finish_section',
 			__( 'Action on Finish', 'antikton-topbar-countdown' ),
 			null,
 			'antikton-topbar-countdown'
@@ -171,7 +186,7 @@ class Topbar_Countdown_Notice {
 			__( 'When End Date/Time is Reached', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_finish_action_field' ),
 			'antikton-topbar-countdown',
-			'tcn_finish_section'
+			'antitoco_finish_section'
 		);
 
 		// Alternative text
@@ -180,7 +195,7 @@ class Topbar_Countdown_Notice {
 			__( 'Alternative Text', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_editor_field' ),
 			'antikton-topbar-countdown',
-			'tcn_finish_section',
+			'antitoco_finish_section',
 			array( 'field' => 'alternative_text' )
 		);
 
@@ -190,7 +205,7 @@ class Topbar_Countdown_Notice {
 			__( 'Alternative Link', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_url_field' ),
 			'antikton-topbar-countdown',
-			'tcn_finish_section',
+			'antitoco_finish_section',
 			array( 'field' => 'alternative_link', 'new_tab_field' => 'alternative_link_new_tab' )
 		);
 
@@ -200,7 +215,7 @@ class Topbar_Countdown_Notice {
 			__( 'Alternative Link Button Text', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_text_field' ),
 			'antikton-topbar-countdown',
-			'tcn_finish_section',
+			'antitoco_finish_section',
 			array( 'field' => 'alternative_link_text', 'placeholder' => __( 'Learn More', 'antikton-topbar-countdown' ) )
 		);
 
@@ -210,7 +225,7 @@ class Topbar_Countdown_Notice {
 			__( 'Alternative Colors', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_alternative_colors_mode_field' ),
 			'antikton-topbar-countdown',
-			'tcn_finish_section'
+			'antitoco_finish_section'
 		);
 
 		// Alternative background color
@@ -219,7 +234,7 @@ class Topbar_Countdown_Notice {
 			__( 'Alternative Background Color', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_color_field' ),
 			'antikton-topbar-countdown',
-			'tcn_finish_section',
+			'antitoco_finish_section',
 			array( 'field' => 'alternative_bg_color' )
 		);
 
@@ -229,13 +244,13 @@ class Topbar_Countdown_Notice {
 			__( 'Alternative Text Color', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_color_field' ),
 			'antikton-topbar-countdown',
-			'tcn_finish_section',
+			'antitoco_finish_section',
 			array( 'field' => 'alternative_text_color' )
 		);
 
 		// Content section
 		add_settings_section(
-			'tcn_content_section',
+			'antitoco_content_section',
 			__( 'Bar Content', 'antikton-topbar-countdown' ),
 			null,
 			'antikton-topbar-countdown'
@@ -247,7 +262,7 @@ class Topbar_Countdown_Notice {
 			__( 'Main Content', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_editor_field' ),
 			'antikton-topbar-countdown',
-			'tcn_content_section',
+			'antitoco_content_section',
 			array( 'field' => 'content' )
 		);
 
@@ -257,7 +272,7 @@ class Topbar_Countdown_Notice {
 			__( 'Main Link', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_url_field' ),
 			'antikton-topbar-countdown',
-			'tcn_content_section',
+			'antitoco_content_section',
 			array( 'field' => 'main_link', 'new_tab_field' => 'main_link_new_tab' )
 		);
 
@@ -267,13 +282,13 @@ class Topbar_Countdown_Notice {
 			__( 'Main Link Button Text', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_text_field' ),
 			'antikton-topbar-countdown',
-			'tcn_content_section',
+			'antitoco_content_section',
 			array( 'field' => 'main_link_text', 'placeholder' => __( 'Learn More', 'antikton-topbar-countdown' ) )
 		);
 
 		// Countdown section
 		add_settings_section(
-			'tcn_countdown_section',
+			'antitoco_countdown_section',
 			__( 'Countdown Timer', 'antikton-topbar-countdown' ),
 			null,
 			'antikton-topbar-countdown'
@@ -285,7 +300,7 @@ class Topbar_Countdown_Notice {
 			__( 'Activate Countdown', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_checkbox_field' ),
 			'antikton-topbar-countdown',
-			'tcn_countdown_section',
+			'antitoco_countdown_section',
 			array( 'field' => 'countdown_active', 'label' => __( 'Show countdown timer', 'antikton-topbar-countdown' ) )
 		);
 
@@ -295,7 +310,7 @@ class Topbar_Countdown_Notice {
 			__( 'Countdown Target', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_countdown_target_mode_field' ),
 			'antikton-topbar-countdown',
-			'tcn_countdown_section'
+			'antitoco_countdown_section'
 		);
 
 		// Countdown target custom
@@ -304,7 +319,7 @@ class Topbar_Countdown_Notice {
 			__( 'Custom Target Date/Time', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_datetime_field' ),
 			'antikton-topbar-countdown',
-			'tcn_countdown_section',
+			'antitoco_countdown_section',
 			array( 'field' => 'countdown_target_custom' )
 		);
 
@@ -314,7 +329,7 @@ class Topbar_Countdown_Notice {
 			__( 'Countdown Prefix Text', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_editor_field' ),
 			'antikton-topbar-countdown',
-			'tcn_countdown_section',
+			'antitoco_countdown_section',
 			array( 'field' => 'countdown_prefix' )
 		);
 
@@ -324,13 +339,13 @@ class Topbar_Countdown_Notice {
 			__( 'Show Seconds', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_checkbox_field' ),
 			'antikton-topbar-countdown',
-			'tcn_countdown_section',
+			'antitoco_countdown_section',
 			array( 'field' => 'countdown_show_seconds', 'label' => __( 'Display seconds in countdown', 'antikton-topbar-countdown' ) )
 		);
 
 		// Appearance section
 		add_settings_section(
-			'tcn_appearance_section',
+			'antitoco_appearance_section',
 			__( 'Appearance', 'antikton-topbar-countdown' ),
 			null,
 			'antikton-topbar-countdown'
@@ -342,7 +357,7 @@ class Topbar_Countdown_Notice {
 			__( 'Background Color', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_color_field' ),
 			'antikton-topbar-countdown',
-			'tcn_appearance_section',
+			'antitoco_appearance_section',
 			array( 'field' => 'bg_color' )
 		);
 
@@ -352,7 +367,7 @@ class Topbar_Countdown_Notice {
 			__( 'Text Color', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_color_field' ),
 			'antikton-topbar-countdown',
-			'tcn_appearance_section',
+			'antitoco_appearance_section',
 			array( 'field' => 'text_color' )
 		);
 
@@ -362,7 +377,7 @@ class Topbar_Countdown_Notice {
 			__( 'Padding Top (px)', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_number_field' ),
 			'antikton-topbar-countdown',
-			'tcn_appearance_section',
+			'antitoco_appearance_section',
 			array( 'field' => 'padding_top', 'default' => '12' )
 		);
 
@@ -372,7 +387,7 @@ class Topbar_Countdown_Notice {
 			__( 'Padding Bottom (px)', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_number_field' ),
 			'antikton-topbar-countdown',
-			'tcn_appearance_section',
+			'antitoco_appearance_section',
 			array( 'field' => 'padding_bottom', 'default' => '12' )
 		);
 
@@ -382,7 +397,7 @@ class Topbar_Countdown_Notice {
 			__( 'Padding Left (px)', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_number_field' ),
 			'antikton-topbar-countdown',
-			'tcn_appearance_section',
+			'antitoco_appearance_section',
 			array( 'field' => 'padding_left', 'default' => '20' )
 		);
 
@@ -392,17 +407,8 @@ class Topbar_Countdown_Notice {
 			__( 'Padding Right (px)', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_number_field' ),
 			'antikton-topbar-countdown',
-			'tcn_appearance_section',
+			'antitoco_appearance_section',
 			array( 'field' => 'padding_right', 'default' => '20' )
-		);
-
-		// Custom CSS
-		add_settings_field(
-			'custom_css',
-			__( 'Custom CSS', 'antikton-topbar-countdown' ),
-			array( __CLASS__, 'render_custom_css_field' ),
-			'antikton-topbar-countdown',
-			'tcn_appearance_section'
 		);
 
 		// Debug Mode
@@ -411,7 +417,7 @@ class Topbar_Countdown_Notice {
 			__( 'Debug Mode', 'antikton-topbar-countdown' ),
 			array( __CLASS__, 'render_checkbox_field' ),
 			'antikton-topbar-countdown',
-			'tcn_appearance_section',
+			'antitoco_appearance_section',
 			array( 'field' => 'debug_mode', 'label' => __( 'Show console.log messages in browser (for debugging)', 'antikton-topbar-countdown' ) )
 		);
 	}
@@ -628,28 +634,6 @@ class Topbar_Countdown_Notice {
 	}
 
 	/**
-	 * Render custom CSS field
-	 */
-	public static function render_custom_css_field() {
-		$settings = self::get_settings();
-		$value = isset( $settings['custom_css'] ) ? $settings['custom_css'] : '';
-		
-		?>
-		<textarea name="<?php echo esc_attr( self::OPTION_NAME ); ?>[custom_css]" rows="10" class="large-text code"><?php echo esc_textarea( $value ); ?></textarea>
-		<p class="description">
-			<?php esc_html_e( 'Add custom CSS to style the top bar. Available classes:', 'antikton-topbar-countdown' ); ?><br>
-			<code>.tcn-topbar</code> - <?php esc_html_e( 'Main bar container', 'antikton-topbar-countdown' ); ?><br>
-			<code>.tcn-topbar-inner</code> - <?php esc_html_e( 'Inner content wrapper', 'antikton-topbar-countdown' ); ?><br>
-			<code>.tcn-content</code> - <?php esc_html_e( 'Main content area', 'antikton-topbar-countdown' ); ?><br>
-			<code>.tcn-countdown-wrapper</code> - <?php esc_html_e( 'Countdown container', 'antikton-topbar-countdown' ); ?><br>
-			<code>.tcn-countdown-prefix</code> - <?php esc_html_e( 'Countdown prefix text', 'antikton-topbar-countdown' ); ?><br>
-			<code>.tcn-countdown</code> - <?php esc_html_e( 'Countdown timer', 'antikton-topbar-countdown' ); ?><br>
-			<code>.tcn-link</code> - <?php esc_html_e( 'Action button/link', 'antikton-topbar-countdown' ); ?>
-		</p>
-		<?php
-	}
-
-	/**
 	 * Render color field
 	 */
 	public static function render_color_field( $args ) {
@@ -667,8 +651,8 @@ class Topbar_Countdown_Notice {
 			$value = $defaults[ $field ];
 		}
 		
-		printf(
-			'<input type="text" name="%s[%s]" value="%s" class="tcn-color-picker">',
+			printf(
+			'<input type="text" name="%s[%s]" value="%s" class="antitoco-color-picker">',
 			esc_attr( self::OPTION_NAME ),
 			esc_attr( $field ),
 			esc_attr( $value )
@@ -680,19 +664,19 @@ class Topbar_Countdown_Notice {
 	 */
 	public static function render_help_ideas_tab() {
 		?>
-		<div class="tcn-help-ideas-wrapper">
-			<div class="tcn-help-intro">
+		<div class="antitoco-help-ideas-wrapper">
+			<div class="antitoco-help-intro">
 				<h2><?php esc_html_e( 'Configuration Ideas & Examples', 'antikton-topbar-countdown' ); ?></h2>
 				<p><?php esc_html_e( 'Get inspired with these practical examples for different seasons and use cases. These are just ideas - customize them to fit your needs!', 'antikton-topbar-countdown' ); ?></p>
 			</div>
 
 			<!-- Seasonal Campaigns -->
-			<div class="tcn-idea-category">
+			<div class="antitoco-idea-category">
 				<h3><span class="dashicons dashicons-calendar-alt"></span> <?php esc_html_e( 'Seasonal Campaigns', 'antikton-topbar-countdown' ); ?></h3>
 				
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>🎄 <?php esc_html_e( 'Christmas Sale (December)', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "🎅 <?php esc_html_e( 'Christmas Sale! Up to 50% OFF on all products', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Start Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'December 1st, 00:00', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'End Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'December 25th, 23:59', 'antikton-topbar-countdown' ); ?></p>
@@ -702,9 +686,9 @@ class Topbar_Countdown_Notice {
 					</div>
 				</div>
 
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>🎆 <?php esc_html_e( 'New Year Countdown (December 31st)', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "🎉 <?php esc_html_e( 'New Year is coming!', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Start Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'December 31st, 00:00', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'End Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'January 1st, 00:00', 'antikton-topbar-countdown' ); ?></p>
@@ -714,9 +698,9 @@ class Topbar_Countdown_Notice {
 					</div>
 				</div>
 
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>❤️ <?php esc_html_e( 'Valentine\'s Day (February 14th)', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "💝 <?php esc_html_e( 'Valentine\'s Day Special - Perfect gifts for your loved ones', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Start Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'February 7th, 00:00', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'End Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'February 14th, 23:59', 'antikton-topbar-countdown' ); ?></p>
@@ -725,9 +709,9 @@ class Topbar_Countdown_Notice {
 					</div>
 				</div>
 
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>🛍️ <?php esc_html_e( 'Black Friday (November)', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "⚡ <?php esc_html_e( 'BLACK FRIDAY - Up to 70% OFF!', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Start Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Last Friday of November, 00:00', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'End Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Sunday after Black Friday, 23:59', 'antikton-topbar-countdown' ); ?></p>
@@ -736,9 +720,9 @@ class Topbar_Countdown_Notice {
 					</div>
 				</div>
 
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>🌸 <?php esc_html_e( 'Spring Sale (March-April)', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "🌺 <?php esc_html_e( 'Spring Collection - Fresh arrivals now available!', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Start Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'March 20th, 00:00', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'End Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'April 30th, 23:59', 'antikton-topbar-countdown' ); ?></p>
@@ -747,9 +731,9 @@ class Topbar_Countdown_Notice {
 					</div>
 				</div>
 
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>☀️ <?php esc_html_e( 'Summer Sale (July-August)', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "🏖️ <?php esc_html_e( 'Summer Sale - Beat the heat with hot deals!', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Start Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'July 1st, 00:00', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'End Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'August 31st, 23:59', 'antikton-topbar-countdown' ); ?></p>
@@ -759,12 +743,12 @@ class Topbar_Countdown_Notice {
 			</div>
 
 			<!-- Product Launches -->
-			<div class="tcn-idea-category">
+			<div class="antitoco-idea-category">
 				<h3><span class="dashicons dashicons-products"></span> <?php esc_html_e( 'Product Launches & Events', 'antikton-topbar-countdown' ); ?></h3>
 				
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>🚀 <?php esc_html_e( 'Product Launch Countdown', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "🎯 <?php esc_html_e( 'New product launching soon!', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Countdown:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Active, targeting launch date', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'Alternative Content:', 'antikton-topbar-countdown' ); ?></strong> "✨ <?php esc_html_e( 'NOW AVAILABLE! Get 20% OFF with code: LAUNCH20', 'antikton-topbar-countdown' ); ?>"</p>
@@ -772,18 +756,18 @@ class Topbar_Countdown_Notice {
 					</div>
 				</div>
 
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>🎫 <?php esc_html_e( 'Webinar/Event Registration', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "📅 <?php esc_html_e( 'Free Webinar: Marketing Strategies 2024', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Countdown:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Active, targeting event start', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'Action on Finish:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Show alternative: "Event is LIVE! Join now"', 'antikton-topbar-countdown' ); ?></p>
 					</div>
 				</div>
 
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>🎁 <?php esc_html_e( 'Coupon Reveal', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "🔒 <?php esc_html_e( 'Secret discount code reveals in...', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Countdown:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Active, show seconds', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'Alternative Content:', 'antikton-topbar-countdown' ); ?></strong> "🎉 <?php esc_html_e( 'Use code SAVE30 for 30% OFF!', 'antikton-topbar-countdown' ); ?>"</p>
@@ -793,12 +777,12 @@ class Topbar_Countdown_Notice {
 			</div>
 
 			<!-- Informational -->
-			<div class="tcn-idea-category">
+			<div class="antitoco-idea-category">
 				<h3><span class="dashicons dashicons-info"></span> <?php esc_html_e( 'Informational & Announcements', 'antikton-topbar-countdown' ); ?></h3>
 				
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>⚠️ <?php esc_html_e( 'Maintenance Notice', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "🔧 <?php esc_html_e( 'Scheduled maintenance tonight 10 PM - 2 AM', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Start Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Day before maintenance, 08:00', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'End Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Maintenance end time', 'antikton-topbar-countdown' ); ?></p>
@@ -807,9 +791,9 @@ class Topbar_Countdown_Notice {
 					</div>
 				</div>
 
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>📢 <?php esc_html_e( 'Important Announcement', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "📣 <?php esc_html_e( 'New shipping policy - Free shipping on orders over $50', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Start Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Empty (always show)', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'End Date:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Empty (permanent)', 'antikton-topbar-countdown' ); ?></p>
@@ -817,9 +801,9 @@ class Topbar_Countdown_Notice {
 					</div>
 				</div>
 
-				<div class="tcn-idea-card">
+				<div class="antitoco-idea-card">
 					<h4>🎓 <?php esc_html_e( 'Course Enrollment Deadline', 'antikton-topbar-countdown' ); ?></h4>
-					<div class="tcn-idea-content">
+					<div class="antitoco-idea-content">
 						<p><strong><?php esc_html_e( 'Main Content:', 'antikton-topbar-countdown' ); ?></strong> "📚 <?php esc_html_e( 'Last chance to enroll! Course starts soon', 'antikton-topbar-countdown' ); ?>"</p>
 						<p><strong><?php esc_html_e( 'Countdown:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Active, targeting enrollment deadline', 'antikton-topbar-countdown' ); ?></p>
 						<p><strong><?php esc_html_e( 'Action on Finish:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Hide the bar', 'antikton-topbar-countdown' ); ?></p>
@@ -828,9 +812,9 @@ class Topbar_Countdown_Notice {
 			</div>
 
 			<!-- Tips Section -->
-			<div class="tcn-idea-category tcn-tips-section">
+			<div class="antitoco-idea-category antitoco-tips-section">
 				<h3><span class="dashicons dashicons-star-filled"></span> <?php esc_html_e( 'Pro Tips', 'antikton-topbar-countdown' ); ?></h3>
-				<ul class="tcn-tips-list">
+				<ul class="antitoco-tips-list">
 					<li>💡 <?php esc_html_e( 'Use emojis to make your messages more eye-catching and friendly', 'antikton-topbar-countdown' ); ?></li>
 					<li>🎨 <?php esc_html_e( 'Match colors with your brand or the season/event theme', 'antikton-topbar-countdown' ); ?></li>
 					<li>⏰ <?php esc_html_e( 'Show seconds in countdown for last-minute urgency (last 24 hours)', 'antikton-topbar-countdown' ); ?></li>
@@ -856,14 +840,14 @@ class Topbar_Countdown_Notice {
 		$page = 'antikton-topbar-countdown';
 		
 		?>
-		<div class="wrap tcn-settings-wrap">
+		<div class="wrap antitoco-settings-wrap">
 			<h1 class="wp-heading-inline"><?php echo esc_html( get_admin_page_title() ); ?></h1>
 			<hr class="wp-header-end">
 						<?php 
 				// Display settings errors with a unique ID to prevent duplicates
-				$settings_errors = get_settings_errors('tcn_settings_group');
+				$settings_errors = get_settings_errors('antitoco_settings_group');
 				if (!empty($settings_errors)) {
-					settings_errors('tcn_settings_group');
+					settings_errors('antitoco_settings_group');
 				}
 				?>
 			
@@ -874,7 +858,7 @@ class Topbar_Countdown_Notice {
 					<div id="post-body-content">
 						
 						<!-- Tabs Navigation -->
-						<h2 class="nav-tab-wrapper tcn-nav-tab-wrapper">
+						<h2 class="nav-tab-wrapper antitoco-nav-tab-wrapper">
 							<a href="#tab-general" class="nav-tab nav-tab-active">
 								<span class="dashicons dashicons-admin-settings"></span> 
 								<?php esc_html_e( 'General & Schedule', 'antikton-topbar-countdown' ); ?>
@@ -897,45 +881,45 @@ class Topbar_Countdown_Notice {
 				</a>
 			</h2>
 
-						<form method="post" action="options.php" class="tcn-main-form">
-							<?php settings_fields( 'tcn_settings_group' ); ?>
+						<form method="post" action="options.php" class="antitoco-main-form">
+							<?php settings_fields( 'antitoco_settings_group' ); ?>
 
-							<div class="tcn-tab-container">
+							<div class="antitoco-tab-container">
 								<!-- Tab: General & Schedule -->
-								<div id="tab-general" class="tcn-tab-content">
+								<div id="tab-general" class="antitoco-tab-content">
 									<?php 
-									self::render_sections_by_id( $page, array( 'tcn_main_section', 'tcn_schedule_section' ) );
+									self::render_sections_by_id( $page, array( 'antitoco_main_section', 'antitoco_schedule_section' ) );
 									?>
 								</div>
 								
 								<!-- Tab: Content & Countdown -->
-								<div id="tab-content" class="tcn-tab-content" style="display:none;">
+								<div id="tab-content" class="antitoco-tab-content" style="display:none;">
 									<?php 
-									self::render_sections_by_id( $page, array( 'tcn_content_section', 'tcn_countdown_section' ) );
+									self::render_sections_by_id( $page, array( 'antitoco_content_section', 'antitoco_countdown_section' ) );
 									?>
 								</div>
 
 								<!-- Tab: Action on Finish -->
-								<div id="tab-finish" class="tcn-tab-content" style="display:none;">
+								<div id="tab-finish" class="antitoco-tab-content" style="display:none;">
 									<?php 
-									self::render_sections_by_id( $page, array( 'tcn_finish_section' ) );
+									self::render_sections_by_id( $page, array( 'antitoco_finish_section' ) );
 									?>
 								</div>
 
 								<!-- Tab: Appearance -->
-								<div id="tab-appearance" class="tcn-tab-content" style="display:none;">
+								<div id="tab-appearance" class="antitoco-tab-content" style="display:none;">
 									<?php 
-									self::render_sections_by_id( $page, array( 'tcn_appearance_section' ) );
+									self::render_sections_by_id( $page, array( 'antitoco_appearance_section' ) );
 									?>
 								</div>
 
 								<!-- Tab: Help & Ideas -->
-								<div id="tab-help" class="tcn-tab-content" style="display:none;">
+								<div id="tab-help" class="antitoco-tab-content" style="display:none;">
 									<?php self::render_help_ideas_tab(); ?>
 								</div>
 							</div>
 
-							<div class="tcn-submit-wrapper">
+							<div class="antitoco-submit-wrapper">
 								<?php submit_button( __( 'Save Changes', 'antikton-topbar-countdown' ), 'primary large' ); ?>
 							</div>
 						</form>
@@ -945,10 +929,10 @@ class Topbar_Countdown_Notice {
 					<div id="postbox-container-1" class="postbox-container">
 						
 						<!-- Quick Tips Box -->
-						<div class="postbox tcn-postbox">
+						<div class="postbox antitoco-postbox">
 							<div class="postbox-header"><h2 class="hndle"><span class="dashicons dashicons-lightbulb"></span> <?php esc_html_e( 'Quick Tips', 'antikton-topbar-countdown' ); ?></h2></div>
 							<div class="inside">
-								<ul class="tcn-tips-list">
+								<ul class="antitoco-tips-list">
 									<li><strong><?php esc_html_e( 'Urgency:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Use the countdown to drive action.', 'antikton-topbar-countdown' ); ?></li>
 									<li><strong><?php esc_html_e( 'Mobile:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Always test on smaller screens.', 'antikton-topbar-countdown' ); ?></li>
 									<li><strong><?php esc_html_e( 'Contrast:', 'antikton-topbar-countdown' ); ?></strong> <?php esc_html_e( 'Ensure text is readable.', 'antikton-topbar-countdown' ); ?></li>
@@ -958,21 +942,21 @@ class Topbar_Countdown_Notice {
 						</div>
 
 						<!-- Server Time Box -->
-						<div class="postbox tcn-postbox">
+						<div class="postbox antitoco-postbox">
 							<div class="postbox-header"><h2 class="hndle"><span class="dashicons dashicons-clock"></span> <?php esc_html_e( 'Server Time', 'antikton-topbar-countdown' ); ?></h2></div>
 							<div class="inside">
-								<div id="tcn-server-time"><?php echo esc_html( current_time( 'Y-m-d H:i:s' ) ); ?></div>
-								<input type="hidden" id="tcn-server-time-offset" value="<?php echo esc_attr( time() - current_time('timestamp') ); ?>">
+								<div id="antitoco-server-time"><?php echo esc_html( current_time( 'Y-m-d H:i:s' ) ); ?></div>
+								<input type="hidden" id="antitoco-server-time-offset" value="<?php echo esc_attr( time() - current_time('timestamp') ); ?>">
 							</div>
 						</div>
 
 						<!-- Support Box -->
-						<div class="postbox tcn-postbox tcn-support-box">
+						<div class="postbox antitoco-postbox antitoco-support-box">
 							<div class="postbox-header"><h2 class="hndle"><span class="dashicons dashicons-sos"></span> <?php esc_html_e( 'Support', 'antikton-topbar-countdown' ); ?></h2></div>
 							<div class="inside">
 								<p><?php esc_html_e( 'Need help or have a feature request?', 'antikton-topbar-countdown' ); ?></p>
 								<p>
-									<a href="https://wordpress.org/support/plugin/antikton-topbar-countdown/" target="_blank" class="button button-secondary button-hero tcn-full-width-btn">
+									<a href="https://wordpress.org/support/plugin/antikton-topbar-countdown/" target="_blank" class="button button-secondary button-hero antitoco-full-width-btn">
 										<?php esc_html_e( 'Get Support', 'antikton-topbar-countdown' ); ?>
 									</a>
 								</p>
@@ -1121,11 +1105,6 @@ class Topbar_Countdown_Notice {
 		// Debug mode
 		$sanitized['debug_mode'] = ! empty( $input['debug_mode'] );
 		
-		// Custom CSS
-		if ( isset( $input['custom_css'] ) ) {
-			$sanitized['custom_css'] = wp_strip_all_tags( $input['custom_css'] );
-		}
-		
 		return $sanitized;
 	}
 
@@ -1232,7 +1211,7 @@ class Topbar_Countdown_Notice {
 		
 		// Admin CSS
 		wp_enqueue_style(
-			'tcn-admin',
+			'antitoco-admin',
 			plugins_url( 'assets/css/admin.css', __FILE__ ),
 			array(),
 			self::VERSION
@@ -1240,40 +1219,40 @@ class Topbar_Countdown_Notice {
 		
 		// Add inline CSS for Help & Ideas tab
 		$help_ideas_css = "
-		.tcn-help-ideas-wrapper {
+		.antitoco-help-ideas-wrapper {
 			max-width: 1200px;
 			margin: 0 auto;
 		}
-		.tcn-help-intro {
+		.antitoco-help-intro {
 			background: #fff;
 			padding: 20px;
 			border-left: 4px solid #2271b1;
 			margin-bottom: 30px;
 			box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 		}
-		.tcn-help-intro h2 {
+		.antitoco-help-intro h2 {
 			margin-top: 0;
 			color: #2271b1;
 		}
-		.tcn-idea-category {
+		.antitoco-idea-category {
 			background: #fff;
 			padding: 25px;
 			margin-bottom: 25px;
 			border-radius: 4px;
 			box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 		}
-		.tcn-idea-category h3 {
+		.antitoco-idea-category h3 {
 			margin-top: 0;
 			padding-bottom: 15px;
 			border-bottom: 2px solid #f0f0f1;
 			color: #1d2327;
 			font-size: 18px;
 		}
-		.tcn-idea-category h3 .dashicons {
+		.antitoco-idea-category h3 .dashicons {
 			color: #2271b1;
 			vertical-align: middle;
 		}
-		.tcn-idea-card {
+		.antitoco-idea-card {
 			background: #f6f7f7;
 			padding: 20px;
 			margin: 15px 0;
@@ -1281,41 +1260,41 @@ class Topbar_Countdown_Notice {
 			border-left: 4px solid #2271b1;
 			transition: all 0.3s ease;
 		}
-		.tcn-idea-card:hover {
+		.antitoco-idea-card:hover {
 			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 			transform: translateX(5px);
 		}
-		.tcn-idea-card h4 {
+		.antitoco-idea-card h4 {
 			margin: 0 0 15px 0;
 			color: #1d2327;
 			font-size: 16px;
 		}
-		.tcn-idea-content p {
+		.antitoco-idea-content p {
 			margin: 8px 0;
 			line-height: 1.6;
 			color: #50575e;
 		}
-		.tcn-idea-content strong {
+		.antitoco-idea-content strong {
 			color: #1d2327;
 			font-weight: 600;
 		}
-		.tcn-tips-section {
+		.antitoco-tips-section {
 			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 			color: #fff;
 		}
-		.tcn-tips-section h3 {
+		.antitoco-tips-section h3 {
 			color: #fff;
 			border-bottom-color: rgba(255,255,255,0.3);
 		}
-		.tcn-tips-section .dashicons {
+		.antitoco-tips-section .dashicons {
 			color: #ffd700 !important;
 		}
-		.tcn-tips-list {
+		.antitoco-tips-list {
 			list-style: none;
 			padding: 0;
 			margin: 15px 0 0 0;
 		}
-		.tcn-tips-list li {
+		.antitoco-tips-list li {
 			padding: 12px 15px;
 			margin: 10px 0;
 			background: rgba(255,255,255,0.1);
@@ -1324,7 +1303,7 @@ class Topbar_Countdown_Notice {
 			line-height: 1.6;
 		}
 		/* Modern Admin Styles */
-		.tcn-settings-wrap { 
+		.antitoco-settings-wrap { 
 			max-width: 100%;
 			margin: 0;
 			padding: 0 20px;
@@ -1346,30 +1325,29 @@ class Topbar_Countdown_Notice {
 			margin: 0;
 			border-left: 1px solid #ccd0d4;
 		}
-		.tcn-tab-container { 
+		.antitoco-tab-container { 
 			background: #fff; 
 			padding: 20px; 
-			margin-top: 20px;
 			box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 		}
-		.tcn-tab-content { 
+		.antitoco-tab-content { 
 			display: block; 
 		}
-		.tcn-nav-tab-wrapper { 
+		.antitoco-nav-tab-wrapper { 
 			margin-bottom: 0 !important;
 			border-bottom: 1px solid #ccd0d4;
 		}
-		.tcn-nav-tab-wrapper .nav-tab { 
+		.antitoco-nav-tab-wrapper .nav-tab { 
 			display: inline-flex;
 			align-items: center;
 			gap: 5px;
 		}
-		.tcn-nav-tab-wrapper .dashicons { 
+		.antitoco-nav-tab-wrapper .dashicons { 
 			font-size: 16px;
 			width: 16px;
 			height: 16px;
 		}
-		.postbox.tcn-postbox .dashicons {
+		.postbox.antitoco-postbox .dashicons {
 			margin-right: 5px;
 		}
 		@media screen and (max-width: 1024px) {
@@ -1383,25 +1361,21 @@ class Topbar_Countdown_Notice {
 		}
 		.wp-picker-container { display: block; }
 		.wp-picker-holder { position: absolute; z-index: 100; }
-		.tcn-submit-wrapper {
-			margin-top: 20px;
-			padding-top: 10px;
-		}
-		.tcn-postbox { border: none; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-		.tcn-postbox .postbox-header { border-bottom: 1px solid #f0f0f1; background: #fff; }
-		.tcn-postbox .hndle { font-size: 14px; display: flex; align-items: center; gap: 8px; }
-		.tcn-tips-list { margin: 0; padding: 0 10px; }
-		.tcn-tips-list li { margin-bottom: 10px; list-style: none; border-bottom: 1px dashed #eee; padding-bottom: 8px; }
-		.tcn-tips-list li:last-child { border-bottom: none; }
-		.tcn-full-width-btn { width: 100%; text-align: center; justify-content: center; margin-bottom: 10px !important; }
-		.tcn-support-box .dashicons-megaphone { color: #2271b1; margin-right: 5px; }
+		.antitoco-postbox { border: none; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+		.antitoco-postbox .postbox-header { border-bottom: 1px solid #f0f0f1; background: #fff; }
+		.antitoco-postbox .hndle { font-size: 14px; display: flex; align-items: center; gap: 8px; }
+		.antitoco-tips-list { margin: 0; padding: 0 10px; }
+		.antitoco-tips-list li { margin-bottom: 10px; list-style: none; border-bottom: 1px dashed #eee; padding-bottom: 8px; }
+		.antitoco-tips-list li:last-child { border-bottom: none; }
+		.antitoco-full-width-btn { width: 100%; text-align: center; justify-content: center; margin-bottom: 10px !important; }
+		.antitoco-support-box .dashicons-megaphone { color: #2271b1; margin-right: 5px; }
 		";
 		
-		wp_add_inline_style( 'tcn-admin', $help_ideas_css );
+		wp_add_inline_style( 'antitoco-admin', $help_ideas_css );
 		
 		// Admin JS
 		wp_enqueue_script(
-			'tcn-admin',
+			'antitoco-admin',
 			plugins_url( 'assets/js/admin.js', __FILE__ ),
 			array( 'jquery', 'wp-color-picker' ),
 			self::VERSION,
@@ -1420,19 +1394,19 @@ class Topbar_Countdown_Notice {
 				$(this).addClass('nav-tab-active');
 				
 				// Show/Hide tabs
-				$('.tcn-tab-content').hide();
+				$('.antitoco-tab-content').hide();
 				var target = $(this).attr('href');
 				$(target).fadeIn(200); // Smooth transition
 			});
 			
 			// Function to update the server time display
 			function updateServerTime() {
-				var timeElement = document.getElementById('tcn-server-time');
+				var timeElement = document.getElementById('antitoco-server-time');
 				if (!timeElement) return;
 				
 				// Get current browser time and adjust for server timezone offset
 				var now = new Date();
-				var offsetElement = document.getElementById('tcn-server-time-offset');
+				var offsetElement = document.getElementById('antitoco-server-time-offset');
 				var serverOffset = offsetElement ? parseInt(offsetElement.value) * 1000 : 0;
 				var serverTime = new Date(now.getTime() - (now.getTimezoneOffset() * 60000) + serverOffset);
 				
@@ -1453,16 +1427,16 @@ class Topbar_Countdown_Notice {
 			
 			// Sync with server every minute to prevent drift
 			setInterval(function() {
-				jQuery.get(ajaxurl, { action: 'tcn_get_server_time' }, function(response) {
+				jQuery.get(ajaxurl, { action: 'antitoco_get_server_time' }, function(response) {
 					if (response && response.success) {
-						document.getElementById('tcn-server-time-offset').value = response.offset;
+						document.getElementById('antitoco-server-time-offset').value = response.offset;
 					}
 				});
 			}, 60000); // Every minute
 		});
 		";
 		
-		wp_add_inline_script( 'tcn-admin', $admin_inline_js );
+		wp_add_inline_script( 'antitoco-admin', $admin_inline_js );
 	}
 
 	/**
@@ -1478,7 +1452,7 @@ class Topbar_Countdown_Notice {
 		
 		// Frontend CSS
 		wp_enqueue_style(
-			'tcn-frontend',
+			'antitoco-frontend',
 			plugins_url( 'assets/css/frontend.css', __FILE__ ),
 			array(),
 			self::VERSION
@@ -1486,7 +1460,7 @@ class Topbar_Countdown_Notice {
 		
 		// Frontend JS
 		wp_enqueue_script(
-			'tcn-frontend',
+			'antitoco-frontend',
 			plugins_url( 'assets/js/frontend.js', __FILE__ ),
 			array(),
 			time(), // Forzar recarga sin caché durante debugging
@@ -1518,8 +1492,8 @@ class Topbar_Countdown_Notice {
 		}
 		
 		wp_localize_script(
-			'tcn-frontend',
-			'tcnData',
+			'antitoco-frontend',
+			'antitocoData',
 			array(
 				'debugMode'               => ! empty( $settings['debug_mode'] ),
 				'serverTime'              => time(), // Current server timestamp for sync
@@ -1541,11 +1515,6 @@ class Topbar_Countdown_Notice {
 				'alternativeTextColor'    => $alternative_text_color,
 			)
 		);
-		
-		// Add custom CSS if provided
-		if ( ! empty( $settings['custom_css'] ) ) {
-			wp_add_inline_style( 'tcn-frontend', $settings['custom_css'] );
-		}
 	}
 
 	/**
@@ -1592,24 +1561,24 @@ class Topbar_Countdown_Notice {
 		
 		ob_start();
 		?>
-		<div id="tcn-topbar" class="tcn-topbar" role="banner" style="background-color: <?php echo esc_attr( $bg_color ); ?>; color: <?php echo esc_attr( $text_color ); ?>; padding: <?php echo esc_attr( $padding_top ); ?>px <?php echo esc_attr( $padding_right ); ?>px <?php echo esc_attr( $padding_bottom ); ?>px <?php echo esc_attr( $padding_left ); ?>px;">
-			<div class="tcn-topbar-inner">
+		<div id="antitoco-topbar" class="antitoco-topbar" role="banner" style="background-color: <?php echo esc_attr( $bg_color ); ?>; color: <?php echo esc_attr( $text_color ); ?>; padding: <?php echo esc_attr( $padding_top ); ?>px <?php echo esc_attr( $padding_right ); ?>px <?php echo esc_attr( $padding_bottom ); ?>px <?php echo esc_attr( $padding_left ); ?>px;">
+			<div class="antitoco-topbar-inner">
 				<?php if ( $is_alternative ) : ?>
 					<!-- Alternative content -->
-					<div class="tcn-content">
+					<div class="antitoco-content">
 						<?php echo wp_kses_post( $settings['alternative_text'] ); ?>
 					</div>
 					
 					<?php if ( ! empty( $settings['alternative_link'] ) ) : ?>
 						<a href="<?php echo esc_url( $settings['alternative_link'] ); ?>" 
-						   class="tcn-link"
+						   class="antitoco-link"
 						   <?php echo ! empty( $settings['alternative_link_new_tab'] ) ? 'target="_blank" rel="noopener noreferrer"' : ''; ?>>
 							<?php echo ! empty( $settings['alternative_link_text'] ) ? esc_html( $settings['alternative_link_text'] ) : esc_html__( 'Learn More', 'antikton-topbar-countdown' ); ?>
 						</a>
 					<?php endif; ?>
 				<?php else : ?>
 					<!-- Normal content -->
-					<div class="tcn-content">
+					<div class="antitoco-content">
 						<?php echo wp_kses_post( $settings['content'] ); ?>
 					</div>
 					
@@ -1625,17 +1594,17 @@ class Topbar_Countdown_Notice {
 					}
 					?>
 					<?php if ( $show_countdown ) : ?>
-						<div class="tcn-countdown-wrapper">
+						<div class="antitoco-countdown-wrapper">
 							<?php if ( ! empty( $settings['countdown_prefix'] ) ) : ?>
-								<span class="tcn-countdown-prefix"><?php echo wp_kses_post( $settings['countdown_prefix'] ); ?></span>
+								<span class="antitoco-countdown-prefix"><?php echo wp_kses_post( $settings['countdown_prefix'] ); ?></span>
 							<?php endif; ?>
-							<span id="tcn-countdown" class="tcn-countdown"></span>
+							<span id="antitoco-countdown" class="antitoco-countdown"></span>
 						</div>
 					<?php endif; ?>
 					
 					<?php if ( ! empty( $settings['main_link'] ) ) : ?>
 						<a href="<?php echo esc_url( $settings['main_link'] ); ?>" 
-						   class="tcn-link"
+						   class="antitoco-link"
 						   <?php echo ! empty( $settings['main_link_new_tab'] ) ? 'target="_blank" rel="noopener noreferrer"' : ''; ?>>
 							<?php echo ! empty( $settings['main_link_text'] ) ? esc_html( $settings['main_link_text'] ) : esc_html__( 'Learn More', 'antikton-topbar-countdown' ); ?>
 						</a>
@@ -1683,8 +1652,12 @@ class Topbar_Countdown_Notice {
 }
 
 // Initialize plugin
-Topbar_Countdown_Notice::init();
+Antikton_Topbar_Countdown::init();
 
 // Register activation/deactivation hooks
-register_activation_hook( __FILE__, array( 'Topbar_Countdown_Notice', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'Topbar_Countdown_Notice', 'deactivate' ) );
+register_activation_hook( __FILE__, array( 'Antikton_Topbar_Countdown', 'activate' ) );
+register_deactivation_hook( __FILE__, array( 'Antikton_Topbar_Countdown', 'deactivate' ) );
+
+
+
+

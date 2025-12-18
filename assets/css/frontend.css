@@ -2,11 +2,8 @@
  * Frontend styles for Topbar Countdown Notice
  */
 
-.tcn-topbar {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+.antitoco-topbar {
+	position: relative;
 	width: 100%;
 	z-index: 9999;
 	padding: 12px 20px;
@@ -16,7 +13,7 @@
 	line-height: 1.6;
 }
 
-.tcn-topbar-inner {
+.antitoco-topbar-inner {
 	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
@@ -26,44 +23,43 @@
 	gap: 15px;
 }
 
-.tcn-content {
-	flex: 1 1 auto;
+.antitoco-content {
 	text-align: center;
 }
 
-.tcn-content p {
+.antitoco-content p {
 	margin: 0;
 	padding: 0;
 }
 
-.tcn-content a {
+.antitoco-content a {
 	color: inherit;
 	text-decoration: underline;
 }
 
-.tcn-content a:hover {
+.antitoco-content a:hover {
 	opacity: 0.8;
 }
 
-.tcn-countdown-wrapper {
+.antitoco-countdown-wrapper {
 	display: flex;
 	align-items: center;
 	gap: 8px;
 	flex-shrink: 0;
 }
 
-.tcn-countdown-prefix {
+.antitoco-countdown-prefix {
 	font-weight: 500;
 }
 
-.tcn-countdown {
+.antitoco-countdown {
 	font-weight: 700;
 	font-size: 16px;
 	letter-spacing: 0.5px;
 	white-space: nowrap;
 }
 
-.tcn-link {
+.antitoco-link {
 	display: inline-block;
 	padding: 8px 20px;
 	background-color: rgba(255, 255, 255, 0.2);
@@ -75,55 +71,56 @@
 	flex-shrink: 0;
 }
 
-.tcn-link:hover {
+.antitoco-link:hover {
 	background-color: rgba(255, 255, 255, 0.3);
 	transform: translateY(-1px);
 	color: inherit;
 }
 
-.tcn-link:active {
+.antitoco-link:active {
 	transform: translateY(0);
 }
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-	.tcn-topbar {
+	.antitoco-topbar {
 		padding: 10px 15px;
 		font-size: 13px;
 	}
 	
-	.tcn-topbar-inner {
+	.antitoco-topbar-inner {
 		flex-direction: column;
 		gap: 10px;
 	}
 	
-	.tcn-content {
+	.antitoco-content {
 		text-align: center;
 	}
 	
-	.tcn-countdown {
+	.antitoco-countdown {
 		font-size: 14px;
 	}
 	
-	.tcn-link {
+	.antitoco-link {
 		padding: 6px 16px;
 		font-size: 13px;
 	}
 }
 
 @media screen and (max-width: 480px) {
-	.tcn-topbar {
+	.antitoco-topbar {
 		padding: 8px 12px;
 		font-size: 12px;
 	}
 	
-	.tcn-countdown-wrapper {
+	.antitoco-countdown-wrapper {
 		flex-direction: column;
 		gap: 4px;
 		text-align: center;
 	}
 	
-	.tcn-countdown {
+	.antitoco-countdown {
 		font-size: 13px;
 	}
 }
+

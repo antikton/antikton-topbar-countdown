@@ -3,7 +3,7 @@ Contributors: antikton
 Tags: topbar, countdown, notice, notification, schedule
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.0.10
+Stable tag: 1.1.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -60,6 +60,22 @@ Absolutely! This is a popular use case. Set up a countdown to build anticipation
 6. Appearance settings panel - customize colors, padding, and styling
 
 == Changelog ==
+
+= 1.1.0 =
+*   **IMPORTANT:** WordPress.org compliance update - All functionality preserved
+*   Changed: Class name from `Topbar_Countdown_Notice` to `Antikton_Topbar_Countdown` for uniqueness
+*   Changed: Prefix from `tcn` to `antitoco` (8 characters) across all functions, options, and CSS classes
+*   Changed: JavaScript object from `tcnData` to `antitocoData`
+*   Changed: All AJAX actions now use `antitoco_` prefix
+*   Changed: All settings groups now use `antitoco_` prefix
+*   Changed: All CSS classes from `.tcn-*` to `.antitoco-*`
+*   Changed: All script/style handles from `tcn-*` to `antitoco-*`
+*   Removed: Custom CSS functionality per WordPress.org guidelines (use Customizer instead)
+*   Improved: Topbar positioning changed from `fixed` to `relative` for better compatibility
+*   Improved: All variables properly escaped for enhanced security
+*   Added: Settings link in plugins list for easier access
+*   Fixed: Admin CSS selectors updated to match new class structure
+*   Security: Comprehensive escaping review - all outputs properly sanitized
 
 = 1.0.10 =
 *   Changed: Plugin renamed to "Antikton Topbar Countdown" for better distinction and WordPress.org compliance
@@ -150,6 +166,9 @@ Absolutely! This is a popular use case. Set up a countdown to build anticipation
 *   Full customization options.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+CRITICAL WordPress.org compliance update. Changed prefix from 'tcn' to 'antitoco', removed custom CSS (use Customizer instead), improved security with proper escaping. All functionality preserved. Update required for WordPress.org approval.
 
 = 1.0.10 =
 IMPORTANT: Plugin renamed to "Antikton Topbar Countdown" for WordPress.org compliance. Slug changed to "antikton-topbar-countdown". All functionality preserved. Update recommended for continued WordPress.org support.
