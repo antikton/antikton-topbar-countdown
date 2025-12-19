@@ -14,37 +14,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Fetch all history for changelog generation
-
-      - name: Get version from tag
-        id: get_version
-        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
-
-      - name: Extract changelog for this version
-        id: changelog
-        run: |
-          VERSION="${{ steps.get_version.outputs.VERSION }}"
-          echo "Extracting changelog for version: $VERSION"
-          
-          # Extract changelog section from readme.txt
-          if [ -f "readme.txt" ]; then
-            # Write directly to GITHUB_OUTPUT to avoid shell interpretation
-            echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
-            
-            # Extract lines between version markers and write directly
-            grep -A 100 "^= $VERSION =" readme.txt | \
-              grep -B 100 "^= [0-9]" | \
-              sed '1d;$d' | \
-              sed '/^$/d' | \
-              sed 's/\r$//' >> $GITHUB_OUTPUT
-            
-            echo "EOF" >> $GITHUB_OUTPUT
-            echo "✅ Changelog extracted for version $VERSION"
-          else
-            echo "❌ readme.txt not found"
-            echo "CHANGELOG=" >> $GITHUB_OUTPUT
-          fi
 
       - name: Create plugin ZIP
         run: |
@@ -65,31 +34,9 @@ jobs:
           
           echo "✅ Plugin ZIP created successfully"
 
-      - name: Generate release notes
-        id: release_notes
-        run: |
-          VERSION="${{ steps.get_version.outputs.VERSION }}"
-          
-          # Write release notes directly to GITHUB_OUTPUT using heredoc
-          {
-            echo "NOTES<<EOF"
-            echo "## 🎉 Version $VERSION"
-            echo ""
-            echo "### 📋 Changelog"
-            echo ""
-            echo "${{ steps.changelog.outputs.CHANGELOG }}"
-            echo ""
-            echo "### 📝 Commits in this release"
-            echo ""
-            echo "_See the full list of changes below._"
-            echo ""
-            echo "EOF"
-          } >> $GITHUB_OUTPUT
-
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          body: ${{ steps.release_notes.outputs.NOTES }}
           generate_release_notes: true
           files: |
             antikton-topbar-countdown.zip
