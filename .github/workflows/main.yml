@@ -12,7 +12,88 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for changelog generation
+
+      - name: Get version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
+
+      - name: Extract changelog for this version
+        id: changelog
+        run: |
+          VERSION="${{ steps.get_version.outputs.VERSION }}"
+          
+          # Extract changelog section from readme.txt
+          if [ -f "readme.txt" ]; then
+            # Try to extract the changelog for this specific version
+            CHANGELOG=$(awk "/^= $VERSION =/,/^= [0-9]/" readme.txt | sed '1d;$d' | sed '/^$/d')
+            
+            if [ -n "$CHANGELOG" ]; then
+              echo "Found changelog in readme.txt for version $VERSION"
+              echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+              echo "$CHANGELOG" >> $GITHUB_OUTPUT
+              echo "EOF" >> $GITHUB_OUTPUT
+            else
+              echo "No specific changelog found for version $VERSION"
+              echo "CHANGELOG=" >> $GITHUB_OUTPUT
+            fi
+          else
+            echo "readme.txt not found"
+            echo "CHANGELOG=" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create plugin ZIP
+        run: |
+          # Create a clean directory for the plugin
+          mkdir -p antikton-topbar-countdown
+          
+          # Copy plugin files (exclude development files)
+          rsync -av --exclude='.git*' \
+                    --exclude='node_modules' \
+                    --exclude='.wordpress-org-assets' \
+                    --exclude='*.zip' \
+                    --exclude='.DS_Store' \
+                    --exclude='Thumbs.db' \
+                    ./ antikton-topbar-countdown/
+          
+          # Create ZIP file
+          zip -r antikton-topbar-countdown.zip antikton-topbar-countdown/
+          
+          echo "✅ Plugin ZIP created successfully"
+
+      - name: Generate release notes
+        id: release_notes
+        run: |
+          VERSION="${{ steps.get_version.outputs.VERSION }}"
+          CHANGELOG="${{ steps.changelog.outputs.CHANGELOG }}"
+          
+          # Start building release notes
+          NOTES="## 🎉 Version $VERSION"
+          NOTES="$NOTES\n\n"
+          
+          # Add changelog if available
+          if [ -n "$CHANGELOG" ]; then
+            NOTES="$NOTES### 📋 Changelog\n\n"
+            NOTES="$NOTES$CHANGELOG\n\n"
+          fi
+          
+          # Add auto-generated notes
+          NOTES="$NOTES### 📝 Commits in this release\n\n"
+          NOTES="$NOTES_See the full list of changes below._\n\n"
+          
+          echo "NOTES<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$NOTES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
+          body: ${{ steps.release_notes.outputs.NOTES }}
           generate_release_notes: true
+          files: |
+            antikton-topbar-countdown.zip
+          draft: false
+          prerelease: false
