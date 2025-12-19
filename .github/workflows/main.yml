@@ -25,27 +25,25 @@ jobs:
         id: changelog
         run: |
           VERSION="${{ steps.get_version.outputs.VERSION }}"
+          echo "Extracting changelog for version: $VERSION"
           
-          # Extract changelog section from readme.txt
+          # Extract changelog section from readme.txt using grep and sed
           if [ -f "readme.txt" ]; then
-            # Convert Windows line endings to Unix for processing
-            dos2unix readme.txt 2>/dev/null || sed -i 's/\r$//' readme.txt
-            
-            # Extract the changelog for this specific version
-            # Match from "= VERSION =" to the next "= X.X.X =" or end of file
-            CHANGELOG=$(awk "/^= $VERSION =\$/,/^= [0-9]+\.[0-9]+\.[0-9]+ =\$/" readme.txt | sed '1d;$d' | sed '/^$/d')
+            # Use grep to find the version section, then sed to extract until next version
+            CHANGELOG=$(grep -A 100 "^= $VERSION =" readme.txt | grep -B 100 "^= [0-9]" | sed '1d;$d' | sed '/^$/d' | sed 's/\r$//')
             
             if [ -n "$CHANGELOG" ]; then
-              echo "Found changelog in readme.txt for version $VERSION"
+              echo "✅ Found changelog for version $VERSION"
+              echo "$CHANGELOG"
               echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
               echo "$CHANGELOG" >> $GITHUB_OUTPUT
               echo "EOF" >> $GITHUB_OUTPUT
             else
-              echo "No specific changelog found for version $VERSION"
+              echo "⚠️ No changelog found for version $VERSION"
               echo "CHANGELOG=" >> $GITHUB_OUTPUT
             fi
           else
-            echo "readme.txt not found"
+            echo "❌ readme.txt not found"
             echo "CHANGELOG=" >> $GITHUB_OUTPUT
           fi
 
