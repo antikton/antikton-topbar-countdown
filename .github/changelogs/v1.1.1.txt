@@ -1,0 +1,7 @@
+## Changelog v1.1.1
+
+**Updated:**
+- Modern, eye-catching plugin banners with updated "Antikton Topbar Countdown" branding
+- GitHub Actions workflow now automatically extracts changelog from readme.txt
+- GitHub Actions now generates plugin ZIP file and attaches it to releases
+- Enhanced release notes generation with version-specific changelog integration

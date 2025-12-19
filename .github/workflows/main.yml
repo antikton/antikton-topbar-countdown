@@ -15,6 +15,26 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Get version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Read changelog file
+        id: changelog
+        run: |
+          VERSION="${{ steps.get_version.outputs.VERSION }}"
+          CHANGELOG_FILE=".github/changelogs/${VERSION}.txt"
+          
+          if [ -f "$CHANGELOG_FILE" ]; then
+            echo "✅ Found changelog file: $CHANGELOG_FILE"
+            echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+            cat "$CHANGELOG_FILE" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          else
+            echo "⚠️ Changelog file not found: $CHANGELOG_FILE"
+            echo "CHANGELOG=No changelog available for this version." >> $GITHUB_OUTPUT
+          fi
+
       - name: Create plugin ZIP
         run: |
           # Create a clean directory for the plugin
@@ -37,6 +57,7 @@ jobs:
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
+          body: ${{ steps.changelog.outputs.CHANGELOG }}
           generate_release_notes: true
           files: |
             antikton-topbar-countdown.zip
